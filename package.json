@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-advanced",
-  "description": "GatsbyJS starter that includes examples for advanced use cases.",
+  "name": "wedding-website",
+  "description": "Website for Kyle and Chloe",
   "version": "1.1.0",
-  "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "author": "Kylo Robs",
   "dependencies": {
     "gatsby": "2.0.91",
     "gatsby-image": "2.0.26",
@@ -75,5 +75,13 @@
     "plugins": [
       "remark-preset-lint-recommended"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylorobs/wedding.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kylorobs/wedding/issues"
+  },
+  "homepage": "https://github.com/kylorobs/wedding#readme"
 }
