@@ -35,6 +35,20 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Amatic SC', 'Open Sans Condensed']
+        }
+      }
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [

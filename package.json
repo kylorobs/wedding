@@ -7,7 +7,7 @@
     "gatsby": "2.0.91",
     "gatsby-image": "2.0.26",
     "gatsby-plugin-catch-links": "2.0.9",
-    "gatsby-plugin-feed": "2.0.11",
+    "gatsby-plugin-feed": "^2.1.0",
     "gatsby-plugin-google-analytics": "2.0.9",
     "gatsby-plugin-lodash": "3.0.3",
     "gatsby-plugin-manifest": "2.0.13",
@@ -17,6 +17,8 @@
     "gatsby-plugin-sharp": "2.0.17",
     "gatsby-plugin-sitemap": "2.0.4",
     "gatsby-plugin-twitter": "2.0.8",
+    "gatsby-plugin-typography": "^2.2.13",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-autolink-headers": "2.0.12",
     "gatsby-remark-copy-linked-files": "2.0.8",
     "gatsby-remark-images": "3.0.1",
@@ -34,6 +36,8 @@
     "react-helmet": "^5.2.0",
     "react-share": "^2.4.0",
     "react-twitter-widgets": "^1.7.1",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
     "url-join": "^4.0.0"
   },
   "devDependencies": {
