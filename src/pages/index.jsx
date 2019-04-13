@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../layout";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
+import Landing from '../components/Landing/Landing'
 
 class Index extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class Index extends React.Component {
       <Layout>
         <div className="index-container">
           <SEO />
-          <h1> Join us for the marriage of <br></br>Chloe and Kyle</h1>
+          <Landing />
         </div>
       </Layout>
     );

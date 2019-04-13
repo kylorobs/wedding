@@ -1,0 +1,147 @@
+.vine-grid{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 12em  1fr 12em;
+  grid-template-areas:
+    "vineLeft vineTop vineRight"
+    "vineLeft vineCenter vineRight"
+    "vineLeft vineBottom vineRight";
+}
+
+.vineCenter {
+    grid-area: vineCenter;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+.vineLeftContainer{
+  grid-area: vineLeft;
+  width: 100%;
+  height: 100%;
+
+  align-self: center;
+   position: relative;
+}
+
+.vineLeft{
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  align-self: center;
+}
+
+.vineTopContainer{
+  grid-area: vineTop;
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  align-self: center;
+  justify-self: center;
+    width: 100%;
+}
+
+.vineTop{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+
+.vineBottomContainer{
+  grid-area: vineBottom;
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  align-self: center;
+  justify-self: center;
+}
+
+.vineBottom{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+
+.vineRightContainer{
+  grid-area: vineRight;
+  width: 100%;
+  height: 100%;
+
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+
+.vineRight{
+  width: 100%;
+  height: 100%;
+  right: 0;
+  position: absolute;
+}
+
+.vine, .branch, .leaf {
+  position: absolute;
+}
+
+
+.fadeIn {
+  animation: fadeIn 3s ease-in;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 500px){
+ .vineBottom, .vineTop{
+  width: 10em;
+}
+}
+
+@media only screen and (min-width: 800px){
+ .vineBottom, .vineTop{
+ width: 12em;
+}
+}
+
+  @media only screen and (min-width: 1100px){
+ .vineLeft, .vineRight, .vineBottom, .vineTop{
+  width: 14em;
+}
+}
+
+  @media only screen and (min-width: 1000px){
+ .vineLeft, .vineRight, .vineBottom, .vineTop{
+  width: 18em;
+}
+}
+
+
+@media only screen and (min-width: 1500px){
+ .vineLeft, .vineRight, .vineBottom, .vineTop{
+  width: 25em;
+}
+}
+
+
+
+@media only screen and (max-width: 500px){
+ .vineBottom, .vineTop{
+  width:  8em;
+}
+}
