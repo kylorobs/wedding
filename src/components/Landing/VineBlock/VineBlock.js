@@ -41,8 +41,6 @@ class VineBlock extends React.Component{
       default: console.log("unknown position")
     }
 
-    console.log("SVGS in component.did")
-    console.log(svgs)
     this.setState({
       svgs: svgs
     })

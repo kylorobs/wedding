@@ -1,0 +1,43 @@
+.mapContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto auto;
+  height: 40em;
+  padding: 4em;
+}
+
+.map{
+  width: 60%;
+}
+
+.mapInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.flexCenterCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 500px){
+  .mapContainer {
+    height: 100vh;
+    padding: 0em;
+  }
+
+  .map{
+    height: 50vh;
+  }
+  .mapInfo {
+    width: 100%;
+    padding: 1em;
+    background-color: blue;
+  }
+
+}

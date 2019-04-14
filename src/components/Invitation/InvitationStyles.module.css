@@ -1,0 +1,21 @@
+.invitationContainer {
+  width: 40em;
+  padding: 2em;
+  margin: 3em auto;
+  background-color: white;
+  border-radius: 2em;
+  border: 5px solid #2e7f43;
+  height: 40em;
+  color: #2e7f43;
+}
+
+.invitationContainer h3{
+    font-size: 3.3em;
+    text-align: center;
+      color: #ce9f13;
+}
+
+.invitationContainer h4{
+    font-size: 2em;
+      color: #2e7f43;
+}
