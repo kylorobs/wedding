@@ -1,61 +1,63 @@
 
 import React from 'react'
-import { SvgLoader, SvgProxy } from 'react-svgmt';
+import SvgLines from 'react-mt-svg-lines';
+import LandingStyles from '../../LandingStyles.module.css'
 
 const Vine = (props) => {
 
-
-function loopAndDraw(vine, container){
-    // appendVine(vine, container);
-    drawLine(vine, "5s", "1s")
-}
-
-function drawLine(svg, duration, delay){
-  let paths = svg.children;
-  let length;
-  if (svg.classList.contains('vine')){
-    length = paths[0].getTotalLength();
-    setDash(paths[0], length, length)
-    animatePath(paths[0], duration, '600', delay)
-  }
-  else {
-    svg.classList.add("fadeIn")
-    for(let x = 0; x < paths.length; x++){
-      length = paths[x].getTotalLength();
-      setDash(paths[x], length, '-400')
-      animatePath(paths[x], duration, '0', delay)
-    }
-  }
-
-  function animatePath(path, duration, offset, delay){
-      path.getBoundingClientRect();
-      path.style.transition = `stroke-dashoffset ${duration} ease-in-out`;
-      path.style.strokeDashoffset = `${offset}`;
-      path.style.animationDelay = delay;
-  }
-
-  function setDash(path, dashArray, dashOffset){
-      path.style.strokeDasharray = `${dashArray}  ${dashArray}`
-      path.style.strokeDashoffset = `${dashOffset}`;
-  }
-}
-
-// function appendVine(vine, container){
-//   container.innerHTML = vine;
-// }
-
-console.log("This is the SVG to do things with")
-console.log(props.svg)
 let svg = props.svg
-let ap = `vine${props.appendTo}`
+const styles = {
+  position: "absolute",
+  left: svg.left,
+  top: svg.top,
+  transform: svg.transform
+};
 
- loopAndDraw(svg, ap);
-svg = svg
-svg = svg.toString();
-console.log(typeof svg)
+let classN;
+if (svg.class === "vine") classN=LandingStyles.vine
+else classN=LandingStyles.branch
+
+
 return (
-  <div dangerouslySetInnerHTML={{__html:{svg}}}></div>
 
+  svg.class === 'vine' ?
+  <SvgLines animate={ true } duration={ 20000 } timing= { "ease" }>
+  <svg
+    width={svg.width}
+    style = {{
+      position: "absolute",
+      left: svg.left,
+      top: svg.top,
+      transform: svg.transform
+    }}
+    className = {classN}
+    viewBox={svg.viewBox}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+      <path d={svg.path1} fill={svg.fill} stroke={svg.stroke} strokeWidth={svg.strokeWidth} />
+  </svg>
+  </SvgLines>
+  :
+  <SvgLines animate={ true } duration={ 10000 } fade= { true } timing= { "ease" } stagger = { 20 }>
+  <svg
+    width={svg.width}
+    style = {{
+      position: "absolute",
+      left: svg.left,
+      top: svg.top,
+      transform: svg.transform
+    }}
+    className = {classN}
+    viewBox={svg.viewBox}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+      <path d={svg.path1} fill={svg.fill} stroke={svg.stroke} strokeWidth={svg.strokeWidth} />
+      <path d={svg.path2} fill={svg.fill} stroke={svg.stroke} strokeWidth={svg.strokeWidth} />
+      <path d={svg.path3} fill={svg.fill} stroke={svg.stroke} strokeWidth={svg.strokeWidth} />
+  </svg>
+  </SvgLines>
 )
 
 }

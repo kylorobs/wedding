@@ -1,16 +1,17 @@
 import React from 'react'
 import VineBlock from './VineBlock/VineBlock.js'
+import LandingStyles from './LandingStyles.module.css'
 
 const Landing = (props) => {
 
   return (
-    <div className="vine-grid">
+    <div className={LandingStyles.vineGrid}>
         <VineBlock position="Left"/>
         <VineBlock position="Right"/>
         <VineBlock position="Top"/>
         <VineBlock position="Bottom"/>
-        <div className="vineCenter">
-          <h1> Join us for the marriage of <br></br>Chloe and Kyle</h1>
+        <div className={LandingStyles.vineCenter}>
+          <h1> Chloe and Kyle<br></br> are getting married!</h1>
         </div>
    </div>
  )

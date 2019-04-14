@@ -1,6 +1,8 @@
-.vine-grid{
+.vineGrid{
   display: grid;
   height: 100vh;
+  width: 100%;
+  overflow: hidden;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 12em  1fr 12em;
   grid-template-areas:
@@ -9,11 +11,21 @@
     "vineLeft vineBottom vineRight";
 }
 
-.vineCenter {
-    grid-area: vineCenter;
+.vineCenter{
+  grid-area: vineCenter;
   width: 100%;
   height: 100%;
-  align-self: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vineCenter h1 {
+    font-size: 4em;
+    opacity: 0;
+    color: #ce9f13;
+    animation: text-focus-in 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s forwards;
 }
 
 .vineLeftContainer{
@@ -97,6 +109,22 @@
   animation: fadeIn 3s ease-in;
 }
 
+.text-focus-in {
+	animation: text-focus-in 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s forwards;
+}
+
+@keyframes text-focus-in {
+  0% {
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
 @keyframes fadeIn{
   0% {
     opacity: 0;
@@ -111,11 +139,19 @@
  .vineBottom, .vineTop{
   width: 10em;
 }
+
+.vineCenter h1 {
+  font-size: 2.5em;
+}
 }
 
 @media only screen and (min-width: 800px){
  .vineBottom, .vineTop{
  width: 12em;
+}
+
+.vineCenter h1 {
+  font-size: 3em;
 }
 }
 
@@ -123,11 +159,18 @@
  .vineLeft, .vineRight, .vineBottom, .vineTop{
   width: 14em;
 }
+
+.vineCenter h1 {
+  font-size: 3.5em;
+}
 }
 
-  @media only screen and (min-width: 1000px){
+  @media only screen and (min-width: 1600px){
  .vineLeft, .vineRight, .vineBottom, .vineTop{
   width: 18em;
+}
+.vineCenter h1 {
+  font-size: 4em;
 }
 }
 
@@ -143,5 +186,9 @@
 @media only screen and (max-width: 500px){
  .vineBottom, .vineTop{
   width:  8em;
+}
+
+.vineCenter h1 {
+  font-size: 2.5em;
 }
 }

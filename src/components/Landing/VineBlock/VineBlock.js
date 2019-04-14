@@ -1,6 +1,6 @@
 import React from 'react'
 import Vine from './Vine/Vine'
-
+import LandingStyles from '../LandingStyles.module.css'
 
 class VineBlock extends React.Component{
 
@@ -49,54 +49,57 @@ class VineBlock extends React.Component{
   }
 
   buildVineColumn = () => {
+    let vineClass = LandingStyles.vine;
+    let branchClass = LandingStyles.branch;
+
     let longestVine = this.state.longestVine;
     let innerSquigglyVine = this.state.innerSquigglyVine;
     let smallSquiggle = this.state.smallSquiggle;
     let branch = this.state.branch;
 
     let vine1 = this.createVineSVG(longestVine, "vine");
-    this.setRotation_Width_Stroke(vine1, 270, '35%', '2')
-    this.setPosition(vine1, 5, 2)
+      this.setRotation_Width_Stroke(vine1, 270, '35%', '2')
+      this.setPosition(vine1, 5, 2)
 
-    let vine2 = this.createVineSVG(longestVine, "vine");
-    this.setRotation_Width_Stroke(vine2, 170, '30%', '1')
-    this.setPosition(vine2, 0, 0)
+      let vine2 = this.createVineSVG(longestVine, "vine");
+      this.setRotation_Width_Stroke(vine2, 170, '30%', '1')
+      this.setPosition(vine2, 0, 0)
 
-    let vine3 = this.createVineSVG(smallSquiggle, "vine");
-    this.setRotation_Width_Stroke(vine3, 0, '27%', '1')
-    this.setPosition(vine3, 27, 0)
+      let vine3 = this.createVineSVG(smallSquiggle, "vine");
+      this.setRotation_Width_Stroke(vine3, 0, '27%', '1')
+      this.setPosition(vine3, 27, 0)
 
-    let vine4 = this.createVineSVG(innerSquigglyVine, "vine");
-    this.setRotation_Width_Stroke(vine4, 30, '55%', '0.6')
-    this.setPosition(vine4, 25, 0)
+      let vine4 = this.createVineSVG(innerSquigglyVine, "vine");
+      this.setRotation_Width_Stroke(vine4, 30, '55%', '0.6')
+      this.setPosition(vine4, 25, 0)
 
-    let vine5 = this.createVineSVG(innerSquigglyVine, "vine");
-    this.setRotation_Width_Stroke(vine5, -20, '55%', '0.6')
-    this.setPosition(vine5, 15, 35)
+      let vine5 = this.createVineSVG(innerSquigglyVine, "vine");
+      this.setRotation_Width_Stroke(vine5, -20, '55%', '0.6')
+      this.setPosition(vine5, 15, 35)
 
-    let vine6 = this.createVineSVG(branch, "branch");
-    this.setRotation_Width_Stroke(vine6, 0, '70%', '1')
-    this.setPosition(vine6, 11, 33)
+      let vine6 = this.createVineSVG(branch, "branch");
+      this.setRotation_Width_Stroke(vine6, 0, '70%', '1')
+      this.setPosition(vine6, 11, 33)
 
-    let vine7 = this.createVineSVG(branch, "branch");
-    this.setRotation_Width_Stroke(vine7, 0, '55%', '2')
-    this.setPosition(vine7, 50, 0)
+      let vine7 = this.createVineSVG(branch, "branch");
+      this.setRotation_Width_Stroke(vine7, 0, '55%', '2')
+      this.setPosition(vine7, 50, 0)
 
-    let vine8 = this.createVineSVG(smallSquiggle, "vine");
-    this.setRotation_Width_Stroke(vine8, 350, '27%', '0.8')
-    this.setPosition(vine8, 62, 8)
+      let vine8 = this.createVineSVG(smallSquiggle, "vine");
+      this.setRotation_Width_Stroke(vine8, 350, '27%', '0.8')
+      this.setPosition(vine8, 62, 8)
 
-     let vine9 = this.createVineSVG(longestVine, "vine");
-     this.setRotation_Width_Stroke(vine9, 0, '55%', '0.8')
-     this.setPosition(vine9, 60, 0)
+       let vine9 = this.createVineSVG(longestVine, "vine");
+       this.setRotation_Width_Stroke(vine9, 0, '55%', '0.8')
+        this.setPosition(vine9, 60, 0)
 
-       let vine10 = this.createVineSVG(branch, "branch");
-    this.setRotation_Width_Stroke(vine10, 18, '6em', '2')
-        this.setPosition(vine10, 79, 28)
+         let vine10 = this.createVineSVG(branch, "branch");
+      this.setRotation_Width_Stroke(vine10, 18, '6em', '2')
+          this.setPosition(vine10, 79, 28)
 
-    let vine11 = this.createVineSVG(smallSquiggle, "vine");
-    this.setRotation_Width_Stroke(vine11, 270, '28%', '1.5')
-    this.setPosition(vine11, 48, 52)
+      let vine11 = this.createVineSVG(smallSquiggle, "vine");
+      this.setRotation_Width_Stroke(vine11, 270, '28%', '1.5')
+      this.setPosition(vine11, 48, 52)
 
     let vinesInBlock = [vine1, vine2, vine3, vine4, vine5, vine6, vine7, vine8, vine9, vine10, vine11]
 
@@ -104,46 +107,48 @@ class VineBlock extends React.Component{
   }
 
   buildVineRow = () => {
+    let vineClass = LandingStyles.vine;
+    let branchClass = LandingStyles.branch;
     let longestVine = this.state.longestVine;
     let innerSquigglyVine = this.state.innerSquigglyVine;
     let smallSquiggle = this.state.smallSquiggle;
     let branch = this.state.branch;
 
-  let vine1 = this.createVineSVG(longestVine, "vine");
-  this.setRotation_Width_Stroke(vine1, 90, '35%', '2')
-  this.setPosition(vine1, -10, 10)
+    let vine1 = this.createVineSVG(longestVine, "vine");
+     this.setRotation_Width_Stroke(vine1, 90, '35%', '2')
+     this.setPosition(vine1, -10, 10)
 
-  let vine2 = this.createVineSVG(longestVine, "vine");
-  this.setRotation_Width_Stroke(vine2, 130, '25%', '1')
-  this.setPosition(vine2, 0, -20)
+     let vine2 = this.createVineSVG(longestVine, "vine");
+     this.setRotation_Width_Stroke(vine2, 130, '25%', '1')
+     this.setPosition(vine2, 0, -20)
 
-  let vine3 = this.createVineSVG(smallSquiggle, "vine");
-  this.setRotation_Width_Stroke(vine3, 0, '27%', '1')
-  this.setPosition(vine3, -10, 50)
+     let vine3 = this.createVineSVG(smallSquiggle, "vine");
+     this.setRotation_Width_Stroke(vine3, 0, '27%', '1')
+     this.setPosition(vine3, -10, 50)
 
-  let vine4 = this.createVineSVG(innerSquigglyVine, "vine");
-  this.setRotation_Width_Stroke(vine4, -20, '40%', '0.6')
-  this.setPosition(vine4, -10, 80)
+     let vine4 = this.createVineSVG(innerSquigglyVine, "vine");
+     this.setRotation_Width_Stroke(vine4, -20, '40%', '0.6')
+     this.setPosition(vine4, -10, 80)
 
-  let vine5 = this.createVineSVG(innerSquigglyVine, "vine");
-  this.setRotation_Width_Stroke(vine5, -80, '55%', '0.6')
-  this.setPosition(vine5, 15, 120)
+     let vine5 = this.createVineSVG(innerSquigglyVine, "vine");
+     this.setRotation_Width_Stroke(vine5, -80, '55%', '0.6')
+     this.setPosition(vine5, 15, 120)
 
-  let vine6 = this.createVineSVG(branch, "branch");
-  this.setRotation_Width_Stroke(vine6, 0, '60%', '1')
-  this.setPosition(vine6, 11, 180)
+     let vine6 = this.createVineSVG(branch, "branch");
+     this.setRotation_Width_Stroke(vine6, 0, '60%', '1')
+     this.setPosition(vine6, 11, 180)
 
-  let vine7 = this.createVineSVG(smallSquiggle, "vine");
-  this.setRotation_Width_Stroke(vine7, 0, '27%', '1')
-  this.setPosition(vine7, -10, 150)
+     let vine7 = this.createVineSVG(smallSquiggle, "vine");
+     this.setRotation_Width_Stroke(vine7, 0, '27%', '1')
+     this.setPosition(vine7, -10, 150)
 
-  let vine8 = this.createVineSVG(smallSquiggle, "vine");
-  this.setRotation_Width_Stroke(vine8, 300, '50%', '0.8')
-  this.setPosition(vine8, -10, 240)
+     let vine8 = this.createVineSVG(smallSquiggle, "vine");
+     this.setRotation_Width_Stroke(vine8, 300, '50%', '0.8')
+     this.setPosition(vine8, -10, 240)
 
-   let vine9 = this.createVineSVG(longestVine, "vine");
-   this.setRotation_Width_Stroke(vine9, 20, '35%', '0.8')
-  this.setPosition(vine9, -20, 300)
+      let vine9 = this.createVineSVG(longestVine, "vine");
+      this.setRotation_Width_Stroke(vine9, 20, '35%', '0.8')
+       this.setPosition(vine9, -20, 300)
 
   let vinesInBlock = [vine1, vine2, vine3, vine4, vine5, vine6, vine7, vine8, vine9]
 
@@ -151,22 +156,18 @@ class VineBlock extends React.Component{
 }
 
  createVineSVG = (svgType, className) => {
-  let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.classList.add(className);
-  svg.setAttribute("viewBox", svgType.viewbox)
+  let svg = {};
+  svg.class = className;
+  svg.viewBox = svgType.viewbox
 
   if (className !== "branch"){
-    let path = this.createSVGChild("path", "d", svgType.path)
-    svg.appendChild(path)
+    svg.path1 = svgType.path;
   }
 
   else if (className === "branch") {
-    let path1 = this.createSVGChild("path", "d", svgType.path1),
-        path2 = this.createSVGChild("path", "d", svgType.path2),
-        path3 = this.createSVGChild("path", "d", svgType.path3)
-    svg.appendChild(path1)
-    svg.appendChild(path2)
-    svg.appendChild(path3)
+    svg.path1 = svgType.path1
+    svg.path2 = svgType.path2
+    svg.path3 = svgType.path3
   }
 
   else console.log("Could not find svg type")
@@ -174,33 +175,18 @@ class VineBlock extends React.Component{
   return svg
 }
 
-createSVGChild = (type, attribute, value) =>{
-  let child = document.createElementNS("http://www.w3.org/2000/svg", type)
-  child.setAttribute(attribute, value)
-  return child
-}
 
 setRotation_Width_Stroke = (vine, rotation, width, stroke) =>{
-   vine.style.width = width;
-   vine.style.transform = `rotate(${rotation}deg)`;
-   let paths = vine.children;
-   if (vine.classList.contains('vine')){
-     paths[0].setAttribute("fill", "none");
-      paths[0].setAttribute("stroke", "#2e7f43");
-      paths[0].setAttribute("stroke-width", stroke);
-   }
-   else {
-     for(let x = 0; x < paths.length; x++){
-       paths[x].setAttribute("fill", "none");
-       paths[x].setAttribute("stroke", "#2e7f43");
-       paths[x].setAttribute("stroke-width", stroke);
-     }
-   }
+   vine.width = width;
+   vine.transform = `rotate(${rotation}deg)`;
+   vine.fill = "none";
+   vine.stroke = "#2e7f43"
+   vine.strokeWidth = stroke;
  }
 
  setPosition =(svg, top, left) =>{
-   svg.style.top = `${top}%`;
-   svg.style.left = `${left}%`;
+   svg.top = `${top}%`;
+   svg.left = `${left}%`;
  }
 
   render(){
@@ -213,14 +199,35 @@ setRotation_Width_Stroke = (vine, rotation, width, stroke) =>{
       })
     }
 
+    let caseArea;
+    let caseCont;
+
+    switch (position){
+      case 'Left' :
+      caseArea = LandingStyles.vineLeft
+      caseCont = LandingStyles.vineLeftContainer
+      break;
+      case 'Right' :
+        caseArea = LandingStyles.vineRight
+        caseCont = LandingStyles.vineRightContainer
+      break;
+      case 'Top' :
+        caseArea = LandingStyles.vineTop;
+        caseCont = LandingStyles.vineTopContainer
+      break;
+      case 'Bottom' :
+      caseArea = LandingStyles.vineBottom;
+      caseCont = LandingStyles.vineBottomContainer
+      break;
+      default: console.log("unknown position")
+    }
+
     console.log(svgs)
 
-    let classArea= `vine${position}Container`
-    let classContainer= `vine${position}`
 
     return (
-      <div className={classArea}>
-        <div className={classContainer}>
+      <div className={caseCont}>
+        <div className={caseArea}>
           {svgs}
         </div>
       </div>
