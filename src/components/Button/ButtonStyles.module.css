@@ -1,0 +1,28 @@
+.button {
+  width: 15em;
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 2em;
+}
+
+.unactive{
+    border-color: blue;
+    background-color: blue;
+    color: white;
+}
+
+.button:hover, .active {
+  border: 2px solid blue;
+  background-color: white;
+  color: blue;
+  cursor: pointer;
+}
+
+
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+    transform: scale(0.99);
+}

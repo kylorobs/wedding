@@ -10,15 +10,15 @@
 .map{
   width: 60%;
 }
-
 .mapInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 40%;
+  text-align: center;
 }
 
+.mapSelector {
+  margin: auto;
+  margin: 2em;
+}
 .marker {
   height: 3em;
   width: 3em;
