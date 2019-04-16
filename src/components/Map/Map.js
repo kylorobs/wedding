@@ -21,6 +21,21 @@ class Map extends React.Component{
     data: null
   }
 
+  setMarkers(features) {
+    if (features.length) {
+      ReactDOM.render(
+        React.createElement(
+          Tooltip, {
+            features
+          }
+        ),
+        this.tooltipContainer
+      );
+    } else {
+      this.tooltipContainer.innerHTML = '';
+    }
+  }
+
   componentDidMount(){
       this.tooltipContainer = document.createElement('div');
       this.tooltipContainer.classList.add(Styles.marker)
