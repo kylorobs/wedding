@@ -14,20 +14,20 @@ const MapBox = ReactMapboxGl({
 class Map extends React.Component{
 
   state = {
-     viewport: {
        width: 400,
        height: 400,
        lat: -34.0906,
        lng: 18.5474,
        zoom: 9.23,
-     }
   }
 
   render(){
-
+    let {lng, lat, zoom} = this.state;
+    let coords = [lng, lat]
+    let zoomValue = [zoom]
     return (
       <div className={Styles.mapContainer}>
-        <MapBox style="mapbox://styles/mapbox/streets-v8" center=[18.5474, -340906] zoom=[9.23] />
+        <MapBox movingMethod='flyTo' className={Styles.map} style="mapbox://styles/mapbox/streets-v8" center={coords} zoom={zoomValue} />
         <div className={Styles.mapInfo}>
           <h3> Let's explore </h3>
           <div className={Styles.flexCenterCenter}>
