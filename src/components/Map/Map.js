@@ -8,6 +8,8 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoia3lsZXJvYmluc29uIiwiYSI6ImNqdWd3cjZ3cDAwZnoze
 
 class Map extends React.Component{
   // mapRef = React.createRef();
+
+  markers = [];
   map;
   Ref10;
   state = {
@@ -20,9 +22,14 @@ class Map extends React.Component{
   }
 
   componentDidMount(){
+      this.tooltipContainer = document.createElement('div');
+      this.tooltipContainer.classList.add(Styles.marker)
+
     let {lng, lat, zoom, interest, wedding, ids} = this.state;
     console.log("MOUNTED AGAIN")
-    console.log(CPTmarkers.interest)
+    this.tooltipContainer = document.createElement('div');
+
+
     this.map = new mapboxgl.Map({
           container: this.mapContainer, // container id
           style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
@@ -33,16 +40,12 @@ class Map extends React.Component{
       let data = CPTmarkers.interest;
       let newData=[];
       data.forEach(ob => {
-        let ref = React.createRef();
-        ob.ref = ref;
-        console.log(ob.ref)
         newData.push(ob);
-        var marker = new mapboxgl.Marker(ref)
-              .setLngLat(ob.coords)
-              .addTo(this.map);
-      })
-
-    this.setState({data: newData})
+        var marker = new mapboxgl.Marker()
+            .setLngLat(ob.coords)
+            .addTo(this.map);
+        this.markers.push(marker)
+    })
 
 
     this.map.on("move", () => {
@@ -87,9 +90,12 @@ class Map extends React.Component{
 
   render(){
     let markers;
-    if(this.state.data){
-      markers = this.state.data.map(marker => {
-         return <div className={Styles.marker} ref={marker.ref}></div>
+    if(this.markers.length){
+     this.markers.map(marker => {
+         let bel = marker.getElement();
+         console.log("HERE IS THE EL")
+         console.log(bel)
+         return bel
      })
     }
 
