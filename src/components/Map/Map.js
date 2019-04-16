@@ -5,12 +5,14 @@ import Button from '../Button/Button'
 import Marker from './Marker'
 import CPTmarkers from '../../../data/CPTmarkers.js'
 mapboxgl.accessToken = 'pk.eyJ1Ijoia3lsZXJvYmluc29uIiwiYSI6ImNqdWd3cjZ3cDAwZnozem1vejMyM241NDYifQ.L7UNeZAlJ_its-x60b9L3Q';
+import ReactDOM from 'react-dom'
 
 class Map extends React.Component{
   // mapRef = React.createRef();
 
   markers = [];
   map;
+  reff;
   Ref10;
   state = {
     lat: -34.0906,
@@ -21,24 +23,8 @@ class Map extends React.Component{
     data: null
   }
 
-  setMarkers(features) {
-    if (features.length) {
-      ReactDOM.render(
-        React.createElement(
-          Tooltip, {
-            features
-          }
-        ),
-        this.tooltipContainer
-      );
-    } else {
-      this.tooltipContainer.innerHTML = '';
-    }
-  }
-
   componentDidMount(){
-      this.tooltipContainer = document.createElement('div');
-      this.tooltipContainer.classList.add(Styles.marker)
+      this.reff = document.createElement('div');
 
     let {lng, lat, zoom, interest, wedding, ids} = this.state;
     console.log("MOUNTED AGAIN")
@@ -56,7 +42,7 @@ class Map extends React.Component{
       let newData=[];
       data.forEach(ob => {
         newData.push(ob);
-        var marker = new mapboxgl.Marker()
+        var marker = new mapboxgl.Marker(this.reff)
             .setLngLat(ob.coords)
             .addTo(this.map);
         this.markers.push(marker)
@@ -71,6 +57,8 @@ class Map extends React.Component{
         zoom: this.map.getZoom().toFixed(2)
       })
     })
+
+    this.setMarkers()
 
   }
 
@@ -101,6 +89,14 @@ class Map extends React.Component{
 
   }
 
+  setMarkers = () => {
+      ReactDOM.render(
+        React.createElement(
+          'div', null, null
+        ), this.reff
+      );
+  }
+
 
 
   render(){
@@ -114,23 +110,18 @@ class Map extends React.Component{
      })
     }
 
-    let  teste = () => {
-        console.log("yay")
-        return <p> Helloooo </p>
-      }
+
 
 
     return (
       <div className={Styles.mapContainer}>
         <div className={Styles.map} ref={el => this.mapContainer = el}>
-          {markers}
         </div>
         <div className={Styles.mapInfo}>
           <h3> Let's explore </h3>
           <div className={Styles.flexCenterCenter}>
             <Button clickHandler={this.clickHandler} text="Cape Town" id="CPT"  />
             <Button clickHandler={this.clickHandler} text="South Africa" id="SA" />
-            {teste()}
           </div>
         </div>
       </div>
