@@ -36,6 +36,7 @@
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-map-gl": "^4.1.2",
+    "react-mapbox-gl": "^4.2.1",
     "react-mt-svg-lines": "^0.9.1",
     "react-share": "^2.4.0",
     "react-svgmt": "^1.1.7",
