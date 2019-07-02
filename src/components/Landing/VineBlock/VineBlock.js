@@ -189,7 +189,6 @@ setRotation_Width_Stroke = (vine, rotation, width, stroke) =>{
 
   render(){
     let position = this.props.position;
-      console.log(this.state.svgs)
     let svgs = "waiting"
     if(this.state.svgs.length > 1){
       svgs = this.state.svgs.map((svg, i) => {
@@ -219,9 +218,6 @@ setRotation_Width_Stroke = (vine, rotation, width, stroke) =>{
       break;
       default: console.log("unknown position")
     }
-
-    console.log(svgs)
-
 
     return (
       <div className={caseCont}>

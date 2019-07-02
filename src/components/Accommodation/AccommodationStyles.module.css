@@ -1,0 +1,57 @@
+.accommodation{
+    width: 70%;
+    margin: auto auto;
+}
+
+.hotels{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hotelContainer{
+    width: 20em;
+    height: auto;
+    margin: 0.5em;
+}
+
+.imageContainer{
+    width: 100%;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+}
+
+.name{
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1em;
+    border: 1px solid blue;
+    border-bottom: none;
+}
+
+.infoBlock {
+    font-size: 1em;
+    padding: 1em;
+    border: 1px solid blue;
+    display: inline-block;
+    text-align: center;
+}
+
+.infoBlock a {
+    height: 100%;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.infoBlock:nth-of-type(1) { flex-grow: 1; }
+.infoBlock:nth-of-type(2) { flex-grow: 1; }
+.infoBlock:nth-of-type(3) { flex-grow: 10; }
