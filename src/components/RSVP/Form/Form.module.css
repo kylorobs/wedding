@@ -1,8 +1,10 @@
 .FormContainer {
-    width: 100%;
     margin: auto;
     padding: 1em;
-    width: 100%;
+    width: 70%;
+    border-radius: 2em;
+    /* background-color:#61beb1; */
+    border: 10px solid #ce9f13;
 }
 
 
@@ -13,10 +15,19 @@
 
 .AddPerson{
     border: 1px solid black;
-    font-size: 1em;
+    font-size: 1.3em;
     padding: 0.5em;
-    width: 5em;
+    width: 7em;
     margin: auto;
+    text-align: center;
+}
+
+.Message {
+    width: 100%;
+     margin: auto;
+     display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 .AddPerson:hover {
@@ -32,5 +43,29 @@
 @media only screen and (max-width: 900px){
     .Form {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .Form {
+        width: 100%;
+    }
+
+    .FormContainer {
+        border: 8px solid #ce9f13;
+        margin: 0;
+        width: 100%;
+    }
+
+    .Message {
+        width: 100%;
+        margin: 2em auto;
+    }
+
+    .AddPerson{
+        border: 1px solid black;
+        font-size: 1em;
+        padding: 0.5em;
+        width: 5em;
     }
 }

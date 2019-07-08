@@ -19,31 +19,50 @@
   margin: auto;
   margin: 2em;
 }
+
+.mapInfo p{
+  text-align: left;
+}
 .marker {
   height: 3em;
   width: 3em;
   background-color: red;
 }
 
-.flexCenterCenter{
+.desktopButtons{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.controls {
+  display: none;
+}
 
 @media only screen and (max-width: 500px){
   .mapContainer {
-    height: 100vh;
+    height: auto;
     padding: 0em;
   }
 
   .map{
     height: 50vh;
+    width: 100%;
   }
   .mapInfo {
     width: 100%;
     padding: 1em;
-    background-color: blue;
+  }
+
+  .controls {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .desktopButtons {
+    display: none;
   }
 
 }

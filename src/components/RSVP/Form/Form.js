@@ -4,6 +4,9 @@ import Button from '../../Button/Button';
 import classes from './Form.module.css';
 import Input from './Input/Input';
 import axios from '../../../axios';
+import withErrorHandler from '../../../hoc/withErrorHandler';
+import Spinner from '../Spinner/Spinner';
+import { navigate } from 'gatsby';
 
 const attendeeData = {
     name : {
@@ -110,7 +113,7 @@ class Form extends React.Component{
                 valid: false,
                 config: {
                     type: 'text',
-                    placeholder: 'Write a message...'
+                    placeholder: 'Write a note...'
                 },
                 validation: {
                     required: false
@@ -149,6 +152,7 @@ class Form extends React.Component{
     }
 
     handleSubmit = () => {
+        // e.preventDefault();
         this.setState({loading: true})
         const rsvp = {};
         const attendees = [];
@@ -168,11 +172,14 @@ class Form extends React.Component{
                 this.setState({loading: false})
                 console.log("request sent");
                 console.log(res)
+                navigate('/thankyou')
             })
             .catch(er => {
                 console.log("error: " + er );
                 this.setState({loading: false})
             })
+        
+            
 
     }
 
@@ -186,15 +193,16 @@ class Form extends React.Component{
                 values : attendees[attendee]})
         }
         const message = this.state.form.message;
-
-        return (
-            <div className={classes.FormContainer}>
+        let form = null;
+        if (this.state.loading) form = <Spinner />;
+        else form = (
+            <React.Fragment>
                 <form className={classes.Form}>
-                        {attendeeArray.map(el => {
-                            return <AttendeeInputs changed={this.inputHandler} key={el.name} id={el.name} inputs={el.values} />
-                        })}
-                        <div style={{width: '50%', margin: 'auto'}}>
-                        <h2 className={classes.AddPerson} onClick={this.addAttendee}> Add a person</h2>
+                    {attendeeArray.map(el => {
+                        return <AttendeeInputs changed={this.inputHandler} key={el.name} id={el.name} inputs={el.values} />
+                    })}
+                    <div className={classes.Message}>
+                        <h2 className={classes.AddPerson} onClick={this.addAttendee}>rsvp for another</h2>
                             <Input
                                 key={'message'}
                                 id={'message'}
@@ -209,11 +217,16 @@ class Form extends React.Component{
                         </div>
                 </form>
                 <div style={{display: 'flex', justifyContent: 'center'}}>
-                     <Button active={false} clickHandler={this.handleSubmit} text="Send your RSVP" />
+                    <Button active={false} clickHandler={this.handleSubmit} text="Send your RSVP" />
                 </div>
+            </React.Fragment> );
+
+        return (
+            <div className={classes.FormContainer}>
+               {form}
             </div>
         )
     }
 }
 
-export default Form;
+export default withErrorHandler(Form, axios);

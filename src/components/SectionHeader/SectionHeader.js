@@ -1,5 +1,6 @@
 import React from 'react'
-import Styles from './SectionHeaderStyles.module.css'
+import Styles from './SectionHeaderStyles.module.css';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const SectionHeader = (props) =>{
 
@@ -15,23 +16,10 @@ const SectionHeader = (props) =>{
 
     return (
       <div className={Styles.sectionHeader}>
-        <svg
-          width={svg.width}
-          style = {{
-            transform: svg.transform
-          }}
-          // className = {classN}
-          viewBox={svg.viewbox}
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-        >
-            <path d={svg.path} fill={svg.fill} stroke={svg.stroke} strokeWidth={svg.strokeWidth} />
-        </svg>
-        <h2> {props.title} </h2>
           <svg
             width={svg.width}
             style = {{
-              transform: 'rotate(-90deg)'
+              transform: svg.transform
             }}
             // className = {classN}
             viewBox={svg.viewbox}
@@ -40,6 +28,21 @@ const SectionHeader = (props) =>{
           >
               <path d={svg.path} fill={svg.fill} stroke={svg.stroke} strokeWidth={svg.strokeWidth} />
           </svg>
+             <ScrollAnimation animateIn={Styles.textFocus}>
+               <h2> {props.title} </h2>
+           </ScrollAnimation>
+            <svg
+              width={svg.width}
+              style = {{
+                transform: 'rotate(-90deg)'
+              }}
+              // className = {classN}
+              viewBox={svg.viewbox}
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+                <path d={svg.path} fill={svg.fill} stroke={svg.stroke} strokeWidth={svg.strokeWidth} />
+            </svg>
       </div>
     )
 

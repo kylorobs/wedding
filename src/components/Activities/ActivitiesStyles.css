@@ -3,3 +3,8 @@
     margin: auto auto;
 }
 
+@media (max-width: 500px){
+    .imageText {
+        width: 100%;
+    }
+}

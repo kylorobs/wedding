@@ -11,7 +11,7 @@ const Hotel = (props) => {
             <div className={Styles.name}><h3>{props.name}</h3></div>
             <div className={Styles.flex}>
               <h4 className={Styles.infoBlock}>{props.beds} bed</h4>
-              <h4 className={Styles.infoBlock}>{props.distanceAway} km</h4>
+              <h4 className={[Styles.infoBlock, Styles.distance].join(' ')}>{props.distanceAway} km</h4>
               <h4 className={Styles.infoBlock}><a href={props.link}>Visit</a></h4>
             </div>
         </div>

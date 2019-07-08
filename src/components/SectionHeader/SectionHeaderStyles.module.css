@@ -3,13 +3,53 @@
   align-items:center;
   justify-content: space-around;
   width: 100%;
-  height: auto;
+  height: 15em;
 }
 
 .sectionHeader h2 {
   color: #ce9f13;
   font-size: 3em;
 }
+
+.textFocus {
+	        animation: textFocus 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+ @-webkit-keyframes textFocus {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes textFocus {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 
 @media only screen and (max-width: 1300px){
   .sectionHeader h2 {
@@ -24,6 +64,9 @@
 }
 
 @media only screen and (max-width: 500px){
+  .sectionHeader{
+    height: 10em;
+  }
   .sectionHeader h2 {
     font-size: 1.8em;
   }

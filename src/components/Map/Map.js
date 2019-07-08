@@ -1,6 +1,4 @@
 import React from 'react'
-import mapboxgl from 'mapbox-gl'
-import ReactMapGL from 'react-map-gl';
 import Styles from './MapStyles.module.css'
 import Button from '../Button/Button'
 import Marker from './Marker'
@@ -67,7 +65,10 @@ class Map extends React.Component{
     let zoomValue = [zoom];
     let markers;
     if(this.state.markers){
-      markers = CPTmarkers.interest.map((marker, i) => {
+
+      let area = this.state.currentArea === 'CPT' ? 'cpt' : 'country';
+
+      markers = CPTmarkers[area].map((marker, i) => {
           return <Feature coordinates={marker.coords}
                           onClick={() =>this.showInfo(marker)}
                           properties={marker.name} />
@@ -82,11 +83,15 @@ class Map extends React.Component{
           <Layer type="symbol" layout={{"icon-image": "marker-15", "icon-size": 1.6}} paint={{"icon-color": "#c70202"}}>
             {markers}
           </Layer>
+          <div className={Styles.controls}>
+              <Button active={currentArea === 'CPT'} clickHandler={this.clickHandler} text="Cape Town" id="CPT"  />
+              <Button active={currentArea === 'SA'} clickHandler={this.clickHandler} text="South Africa" id="SA" />
+          </div>
         </MapBox>
         <div className={Styles.mapInfo}>
           <div className={Styles.mapSelector}>
             <h2> Let's explore </h2>
-            <div className={Styles.flexCenterCenter}>
+            <div className={Styles.desktopButtons}>
               <Button active={currentArea === 'CPT'} clickHandler={this.clickHandler} text="Cape Town" id="CPT"  />
               <Button active={currentArea === 'SA'} clickHandler={this.clickHandler} text="South Africa" id="SA" />
             </div>

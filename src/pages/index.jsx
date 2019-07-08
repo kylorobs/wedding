@@ -16,7 +16,9 @@ class Index extends React.Component {
       <Layout>
         <div className="index-container">
           <SEO />
-          <Landing />
+          <Landing>
+            <h1> Chloe and Kyle<br></br> are getting married!</h1>
+          </Landing>
           <Invitation/>
           <SectionHeader title="A Guide to South Africa" />
           <Map />

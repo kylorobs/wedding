@@ -6,15 +6,15 @@
 }
 
 .unactive{
-    border-color: blue;
-    background-color: blue;
+    border-color:#ce9f13;
+    background-color:#ce9f13;
     color: white;
 }
 
 .button:hover, .active {
-  border: 2px solid blue;
+  border: 2px solid #ce9f13;
   background-color: white;
-  color: blue;
+  color:#ce9f13;
   cursor: pointer;
 }
 

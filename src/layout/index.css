@@ -10,3 +10,16 @@ body {
     margin: 0;
     padding: 20px;
 }
+
+p {
+    font-size: 1.1em;
+    padding: 0 2em;
+}
+
+@media (max-width: 500px){
+
+    p {
+        font-size: 1em;
+        padding: 0em;
+    }
+}

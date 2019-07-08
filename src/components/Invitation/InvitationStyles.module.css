@@ -1,12 +1,21 @@
 .invitationContainer {
-  width: 40em;
+  width: 33em;
   padding: 2em;
-  margin: 3em auto;
+  margin: 3em;
   background-color: white;
   border-radius: 2em;
   border: 5px solid #2e7f43;
-  height: 40em;
+  height: 30em;
   color: #2e7f43;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .invitationContainer h3{
@@ -18,4 +27,50 @@
 .invitationContainer h4{
     font-size: 2em;
       color: #2e7f43;
+}
+
+.Container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2em 0;
+}
+
+.ImageContainer {
+  width: 50%;
+  background-size: cover;
+  background-position: center center;
+  height: auto;
+  border-radius: 2em;
+  margin: 3em 0;
+  margin-left: 0;
+  min-height: 20em;
+}
+
+@media only screen and (max-width: 500px){
+
+  .Container {
+    padding:0;
+  }
+
+  .ImageContainer {
+    width: 100%;
+    margin: 0;
+}
+
+  .invitationContainer {
+    margin: 3em 0;
+    margin-bottom: 0;
+    height: auto;
+  }
+
+  .heading{
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .invitationContainer h4 {
+    font-size: 1.7em;
+
+  }
 }
