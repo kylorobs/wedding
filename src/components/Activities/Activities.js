@@ -1,14 +1,12 @@
 import React from 'react';
 import ImageText from '../ImageText/ImageText'
 import './ActivitiesStyles.css'
-import Img from '../../../images/natte.jpg';
-import cricket from '../../../images/cricket.jpg';
-import lions from '../../../images/lions.jpeg';
-import clifton from '../../../images/clifton.jpg';
-import penguins from '../../../images/penguins.jpg';
-import table from '../../../images/table.jpeg';
-import kirst from '../../../images/kirst.jpg';
-import parkrun from '../../../images/parkrun.jpg';
+import lions from '../../images/lions.jpeg';
+import clifton from '../../images/clifton.jpg';
+import penguins from '../../images/penguins.jpg';
+import table from '../../images/table.jpeg';
+import kirst from '../../images/kirst.jpg';
+import parkrun from '../../images/parkrun.jpg';
 
 
 const Activities = () => {

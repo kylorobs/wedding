@@ -1,5 +1,5 @@
 const urljoin = require("url-join");
-const config = require("./data/SiteConfig");
+const config = require("./src/data/SiteConfig");
 
 module.exports = {
   pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
@@ -81,7 +81,6 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-plugin-catch-links",
-    "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",

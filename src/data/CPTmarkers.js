@@ -35,6 +35,61 @@ var CPTmarkers = {
       coords : [22.45, -33.99],
       name : "George",
       text : "George has great sentimental value to chloe and her family, as it's where her Granny stays and is her ‘special place’. The outskirts, more perhaps than the town itself, is a must-see. The Wilderness beach is stunning and great for a long walk."
+    },
+    {
+      coords : [22.45, -33.99],
+      name : "Kynsna",
+      text : "Further along the coast is Knysna. To get there you drive along a beautiful stretch of road overlooking the lagoon where the unique composition of fresh and salt water allow for an interesting mix of animals and plants including the kynsna seahorse, the research topic of a great friend of my granny and grandpa – professor Allanson. Legend also states there are still Knysna elephants stomping around the bush here so look out!"
+    },
+    {
+      coords : [22.45, -33.99],
+      name : "Tsitsikamma National Park",
+      text : "George has great sentimental value to chloe and her family, as it's where her Granny stays and is her ‘special place’. The outskirts, more perhaps than the town itself, is a must-see. The Wilderness beach is stunning and great for a long walk."
+    },
+    {
+      coords : [22.45, -33.99],
+      name : "Grahamstown",
+      text : "."
+    },
+    {
+      coords : [22.45, -33.99],
+      name : "Johannesburg",
+      text : "."
+    },
+    {
+      coords : [22.45, -33.99],
+      name : "Kruger National Park",
+      text : "."
+    },
+    {
+      coords : [22.45, -33.99],
+      name : "Sun City",
+      text : "."
+    },
+    {
+      coords : [22.45, -33.99],
+      name : "Grahamstown",
+      text : "."
+    },
+    {
+      coords : [22.45, -33.99],
+      name : "Grahamstown",
+      text : "."
+    },
+    {
+      coords : [22.45, -33.99],
+      name : "Grahamstown",
+      text : "."
+    },
+    {
+      coords : [22.45, -33.99],
+      name : "Grahamstown",
+      text : "."
+    },
+    {
+      coords : [22.45, -33.99],
+      name : "Grahamstown",
+      text : "."
     }],
 }
 

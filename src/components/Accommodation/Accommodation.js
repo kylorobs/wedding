@@ -1,10 +1,9 @@
 import React from 'react';
 import Styles from './AccommodationStyles.module.css'
 import Hotel from './Hotel'
-import Natte from '../../../images/natte.jpg';
-import nearby1 from '../../../images/nearby1.jpg';
-import nearby2 from '../../../images/nearby2.jpg';
-import nearby3 from '../../../images/nearby3.jpg';
+import nearby1 from '../../images/nearby1.jpg';
+import nearby2 from '../../images/nearby2.jpg';
+import nearby3 from '../../images/nearby3.jpg';
 
 const Accommodation = () => {
 

@@ -1,8 +1,7 @@
 import React from 'react'
 import Styles from './MapStyles.module.css'
-import Button from '../Button/Button'
-import Marker from './Marker'
-import CPTmarkers from '../../../data/CPTmarkers.js'
+import Button from '../Button/Button';
+import CPTmarkers from '../../data/CPTmarkers';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
 

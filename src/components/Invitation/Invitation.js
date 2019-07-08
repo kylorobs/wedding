@@ -1,6 +1,6 @@
 import React from 'react';
 import Styles from './InvitationStyles.module.css';
-import coupleImage from '../../../images/couple.jpg'
+import coupleImage from '../../images/couple.jpg'
 
 const Invitation = (props) => {
 

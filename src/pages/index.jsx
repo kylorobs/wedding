@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../layout";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
+import config from "../data/SiteConfig";
 import Landing from '../components/Landing/Landing'
 import SectionHeader from '../components/SectionHeader/SectionHeader'
 import Map from '../components/Map/Map'
@@ -15,7 +14,6 @@ class Index extends React.Component {
     return (
       <Layout>
         <div className="index-container">
-          <SEO />
           <Landing>
             <h1> Chloe and Kyle<br></br> are getting married!</h1>
           </Landing>
