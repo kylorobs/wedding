@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageText from '../ImageText/ImageText'
 import './ActivitiesStyles.css'
-import lions from '../../images/lions.jpeg';
+import lions from '../../images/lions.jpg';
 import clifton from '../../images/clifton.jpg';
 import penguins from '../../images/penguins.jpg';
 import table from '../../images/table.jpeg';
