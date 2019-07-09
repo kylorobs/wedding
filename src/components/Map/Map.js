@@ -3,6 +3,7 @@ import Styles from './MapStyles.module.css'
 import Button from '../Button/Button';
 import CPTmarkers from '../../data/CPTmarkers';
 import { Layer, Feature } from "react-mapbox-gl";
+let MapBox;
 
 let mapboxgl;
 let ReactMapboxGl = {};
@@ -10,6 +11,7 @@ let ReactMapboxGl = {};
 if (typeof window !== `undefined`) {
   mapboxgl = require('mapbox-gl')
   ReactMapboxGl = require('react-mapbox-gl')
+  MapBox = ReactMapboxGl.Map({accessToken: 'pk.eyJ1Ijoia3lsZXJvYmluc29uIiwiYSI6ImNqdWd3cjZ3cDAwZnozem1vejMyM241NDYifQ.L7UNeZAlJ_its-x60b9L3Q'})
 } else {
   ReactMapboxGl.Map = () => {
     return class Mock extends React.Component {
@@ -23,7 +25,7 @@ if (typeof window !== `undefined`) {
   }
 }
 
-const MapBox = ReactMapboxGl.Map({accessToken: 'pk.eyJ1Ijoia3lsZXJvYmluc29uIiwiYSI6ImNqdWd3cjZ3cDAwZnozem1vejMyM241NDYifQ.L7UNeZAlJ_its-x60b9L3Q'})
+
 
 class MapCanvas extends React.Component{
 
