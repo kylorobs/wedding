@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../layout";
-import config from "../data/SiteConfig";
+import config from "../../siteConfig/SiteConfig";
 import Landing from '../components/Landing/Landing'
 import SectionHeader from '../components/SectionHeader/SectionHeader'
 // import Map from '../components/Map/Map'
