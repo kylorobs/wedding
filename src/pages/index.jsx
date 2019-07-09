@@ -3,7 +3,7 @@ import Layout from "../layout";
 import config from "../../siteConfig/SiteConfig";
 import Landing from '../components/Landing/Landing'
 import SectionHeader from '../components/SectionHeader/SectionHeader'
-// import Map from '../components/Map/Map'
+import Map from '../components/Map/Map'
 import Invitation from '../components/Invitation/Invitation'
 import Accommodation from '../components/Accommodation/Accommodation'
 import Activities from '../components/Activities/Activities'
@@ -18,8 +18,8 @@ class Index extends React.Component {
             <h1> Chloe and Kyle<br></br> are getting married!</h1>
           </Landing>
           <Invitation/>
-          {/* <SectionHeader title="A Guide to South Africa" />
-          <Map /> */}
+          <SectionHeader title="A Guide to South Africa" />
+          <Map />
           <SectionHeader title="Where to stay" />
           <Accommodation />
           <SectionHeader title="Planned activities" />
