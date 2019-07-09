@@ -2,11 +2,12 @@ import React from 'react'
 import Styles from './MapStyles.module.css'
 import Button from '../Button/Button';
 import CPTmarkers from '../../data/CPTmarkers';
-import 'mapbox-gl/dist/mapbox-gl.css';
+// import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
 
 const MapBox = ReactMapboxGl({
-  accessToken: 'pk.eyJ1Ijoia3lsZXJvYmluc29uIiwiYSI6ImNqdWd3cjZ3cDAwZnozem1vejMyM241NDYifQ.L7UNeZAlJ_its-x60b9L3Q'})
+  accessToken: 'pk.eyJ1Ijoia3lsZXJvYmluc29uIiwiYSI6ImNqdWd3cjZ3cDAwZnozem1vejMyM241NDYifQ.L7UNeZAlJ_its-x60b9L3Q'
+})
 
 class Map extends React.Component{
 
@@ -103,4 +104,4 @@ class Map extends React.Component{
   }
 }
 
-export default Map
+export default Map;
