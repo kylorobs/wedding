@@ -7,6 +7,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             test: /mapbox-gl/,
             use: loaders.null(),
           },
+          {
+            test: /react-mapbox-gl/,
+            use: loaders.null(),
+          },
         ],
       },
     })
