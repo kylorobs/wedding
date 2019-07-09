@@ -2,6 +2,7 @@ import React from 'react'
 import Styles from './MapStyles.module.css'
 import Button from '../Button/Button';
 import CPTmarkers from '../../data/CPTmarkers';
+import { Layer, Feature } from "react-mapbox-gl";
 
 let mapboxgl;
 let ReactMapboxGl = {};
@@ -9,8 +10,6 @@ let ReactMapboxGl = {};
 if (typeof window !== `undefined`) {
   mapboxgl = require('mapbox-gl')
   ReactMapboxGl = require('react-mapbox-gl')
-  import { Layer, Feature } from "react-mapbox-gl";
-  
 } else {
   ReactMapboxGl.Map = () => {
     return class Mock extends React.Component {
