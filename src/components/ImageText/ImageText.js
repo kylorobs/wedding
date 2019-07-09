@@ -19,4 +19,4 @@ const ImageStrip = (props) => {
     )
 }
 
-export default ImageStrip
+export default ImageStrip;

@@ -230,4 +230,4 @@ setRotation_Width_Stroke = (vine, rotation, width, stroke) =>{
 
 }
 
-export default VineBlock
+export default VineBlock;

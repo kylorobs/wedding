@@ -32,4 +32,4 @@ const Invitation = (props) => {
   )
 }
 
-export default Invitation
+export default Invitation;
