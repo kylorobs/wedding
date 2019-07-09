@@ -4,7 +4,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /mapbox-gl/,
+            test: /react-mapbox-gl/,
             use: loaders.null(),
           },
         ],
