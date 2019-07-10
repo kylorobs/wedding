@@ -2,31 +2,18 @@ import React from 'react'
 import Styles from './MapStyles.module.css'
 import Button from '../Button/Button';
 import CPTmarkers from '../../data/CPTmarkers';
-import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
+import { Layer, Feature } from "react-mapbox-gl";
 
 // let mapboxgl;
-// let ReactMapboxGl = {};
+let ReactMapboxGl = null;
+let MapBox;
 
-// if (typeof window !== `undefined`) {
-//   console.log("WINDOW UNDEFINED")
-//   mapboxgl = require('mapbox-gl')
-//   ReactMapboxGl = require('react-mapbox-gl')
-//   MapBox = ReactMapboxGl.Map({accessToken: 'pk.eyJ1Ijoia3lsZXJvYmluc29uIiwiYSI6ImNqdWd3cjZ3cDAwZnozem1vejMyM241NDYifQ.L7UNeZAlJ_its-x60b9L3Q'})
-// } else {
-//   ReactMapboxGl.Map = () => {
-//     return class Mock extends React.Component {
-//       constructor() {
-//         super()
-//       }
-//       render() {
-//         console.log("RNEDERING NULL")
-//         return null;
-//       }
-//     }
-//   }
-// }
+if (typeof window !== `undefined`) {
+  console.log("WINDOW DEFINED")
+  ReactMapboxGl = require('react-mapbox-gl');
+  MapBox = ReactMapboxGl.Map({accessToken: 'pk.eyJ1Ijoia3lsZXJvYmluc29uIiwiYSI6ImNqdWd3cjZ3cDAwZnozem1vejMyM241NDYifQ.L7UNeZAlJ_its-x60b9L3Q'});
+} 
 
-const MapBox = ReactMapboxGl.Map({accessToken: 'pk.eyJ1Ijoia3lsZXJvYmluc29uIiwiYSI6ImNqdWd3cjZ3cDAwZnozem1vejMyM241NDYifQ.L7UNeZAlJ_its-x60b9L3Q'});
 
 class Map extends React.Component{
 
@@ -36,13 +23,19 @@ class Map extends React.Component{
        zoom: 9.23,
        type: null,
        currentArea: 'CPT',
-       currentMarker: null
+       currentMarker: null,
+       reactMapboxGl: null
+
   }
 
   componentDidMount(){
-    this.setState({markers: [...CPTmarkers.interest]})
-    console.log(MapBox)
-    console.log("mapbox available")
+    let updateReactMapBox = null;
+    if (ReactMapboxGl){
+      updateReactMapBox = true;
+    }
+    this.setState({
+      markers: [...CPTmarkers.interest], 
+      reactMapboxGl: updateReactMapBox })
   }
 
   clickHandler = (e) => {
@@ -79,14 +72,21 @@ class Map extends React.Component{
   }
 
   render(){
-  
+
+    console.log(this.state.updateReactMapBox)
+
     let {lng, lat, zoom, currentMarker, currentArea} = this.state;
 
-    if (!currentMarker) currentMarker = '';
-    let coords = [lng, lat]
-    let zoomValue = [zoom];
+    let coords;
+    let zoomValue;
     let markers;
-    if(this.state.markers){
+    let mapjsx;
+  
+    if(this.state.markers && this.state.reactMapboxGl){
+
+      if (!currentMarker) currentMarker = '';
+      coords = [lng, lat]
+     zoomValue = [zoom];
 
       let area = this.state.currentArea === 'CPT' ? 'cpt' : 'country';
 
@@ -95,33 +95,39 @@ class Map extends React.Component{
                           onClick={() =>this.showInfo(marker)}
                           properties={marker.name} />
         })
+
+        mapjsx = (
+          <div className={Styles.mapContainer}>
+          <MapBox movingMethod='flyTo' className={Styles.map} style="mapbox://styles/mapbox/streets-v8" center={coords} zoom={zoomValue}>
+            <Layer type="symbol" layout={{"icon-image": "marker-15", "icon-size": 1.6}} paint={{"icon-color": "#c70202"}}>
+              {markers}
+            </Layer>
+            <div className={Styles.controls}>
+                <Button active={currentArea === 'CPT'} clickHandler={this.clickHandler} text="Cape Town" id="CPT"  />
+                <Button active={currentArea === 'SA'} clickHandler={this.clickHandler} text="South Africa" id="SA" />
+            </div>
+          </MapBox>
+          <div className={Styles.mapInfo}>
+            <div className={Styles.mapSelector}>
+              <h2> Let's explore </h2>
+              <div className={Styles.desktopButtons}>
+                <Button active={currentArea === 'CPT'} clickHandler={this.clickHandler} text="Cape Town" id="CPT"  />
+                <Button active={currentArea === 'SA'} clickHandler={this.clickHandler} text="South Africa" id="SA" />
+              </div>
+            </div>
+            <h3> {currentMarker.name} </h3>
+            <p> {currentMarker.text} </p>
+          </div>
+        </div>
+        );
     }
 
+    
 
+      if (!this.state.reactMapboxGl) mapjsx = 'Loading'
 
     return (
-      <div className={Styles.mapContainer}>
-        <MapBox movingMethod='flyTo' className={Styles.map} style="mapbox://styles/mapbox/streets-v8" center={coords} zoom={zoomValue}>
-          <Layer type="symbol" layout={{"icon-image": "marker-15", "icon-size": 1.6}} paint={{"icon-color": "#c70202"}}>
-            {markers}
-          </Layer>
-          <div className={Styles.controls}>
-              <Button active={currentArea === 'CPT'} clickHandler={this.clickHandler} text="Cape Town" id="CPT"  />
-              <Button active={currentArea === 'SA'} clickHandler={this.clickHandler} text="South Africa" id="SA" />
-          </div>
-        </MapBox>
-        <div className={Styles.mapInfo}>
-          <div className={Styles.mapSelector}>
-            <h2> Let's explore </h2>
-            <div className={Styles.desktopButtons}>
-              <Button active={currentArea === 'CPT'} clickHandler={this.clickHandler} text="Cape Town" id="CPT"  />
-              <Button active={currentArea === 'SA'} clickHandler={this.clickHandler} text="South Africa" id="SA" />
-            </div>
-          </div>
-          <h3> {currentMarker.name} </h3>
-          <p> {currentMarker.text} </p>
-        </div>
-      </div>
+     mapjsx
     )
   }
 }
