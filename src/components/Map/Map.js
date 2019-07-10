@@ -9,6 +9,7 @@ let mapboxgl;
 let ReactMapboxGl = {};
 
 if (typeof window !== `undefined`) {
+  console.log("WINDOW UNDEFINED")
   mapboxgl = require('mapbox-gl')
   ReactMapboxGl = require('react-mapbox-gl')
   MapBox = ReactMapboxGl.Map({accessToken: 'pk.eyJ1Ijoia3lsZXJvYmluc29uIiwiYSI6ImNqdWd3cjZ3cDAwZnozem1vejMyM241NDYifQ.L7UNeZAlJ_its-x60b9L3Q'})
@@ -19,7 +20,8 @@ if (typeof window !== `undefined`) {
         super()
       }
       render() {
-        return <div />
+        console.log("RNEDERING NULL")
+        return null;
       }
     }
   }
@@ -41,6 +43,7 @@ class MapCanvas extends React.Component{
   componentDidMount(){
     this.setState({markers: [...CPTmarkers.interest]})
     console.log(MapBox)
+    console.log("mapbox available")
   }
 
   clickHandler = (e) => {
