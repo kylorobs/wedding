@@ -54,17 +54,17 @@ var CPTmarkers = {
     {
       coords : [22.45, -33.99],
       name : "Johannesburg",
-      text : "."
+      text : ""
     },
     {
       coords : [22.45, -33.99],
       name : "Kruger National Park",
-      text : "."
+      text : ""
     },
     {
       coords : [22.45, -33.99],
       name : "Sun City",
-      text : "."
+      text : ""
     },
     {
       coords : [22.45, -33.92],
