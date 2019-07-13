@@ -34,7 +34,7 @@ class Map extends React.Component{
       updateReactMapBox = true;
     }
     this.setState({
-      markers: [...CPTmarkers.interest], 
+      markers: [...CPTmarkers.cpt], 
       reactMapboxGl: updateReactMapBox 
     });
 
