@@ -2,7 +2,7 @@ import React from 'react'
 import Styles from './MapStyles.module.css'
 import Button from '../Button/Button';
 import CPTmarkers from '../../data/CPTmarkers';
-import { Layer, Feature } from "react-mapbox-gl";
+import { Layer, Feature, } from "react-mapbox-gl";
 
 // let mapboxgl;
 let ReactMapboxGl = null;
@@ -18,8 +18,8 @@ if (typeof window !== `undefined`) {
 class Map extends React.Component{
 
   state = {
-       lat: -34.0906,
-       lng: 18.5474,
+       lat: -34.0207,
+       lng: 18.6048,
        zoom: 9.23,
        type: null,
        currentArea: 'CPT',
@@ -35,8 +35,12 @@ class Map extends React.Component{
     }
     this.setState({
       markers: [...CPTmarkers.interest], 
-      reactMapboxGl: updateReactMapBox })
+      reactMapboxGl: updateReactMapBox 
+    });
+
   }
+
+  
 
   clickHandler = (e) => {
     let btn = e.target.id;
@@ -44,8 +48,8 @@ class Map extends React.Component{
     let coords = {}
     switch(btn){
       case 'CPT' :
-        coords.lng = 18.5474;
-        coords.lat = -34.0906;
+        coords.lng = 18.6048;
+        coords.lat = -34.0207;
         coords.zoom = 9.23;
         area = 'CPT'
       break;
@@ -62,7 +66,8 @@ class Map extends React.Component{
       lat: coords.lat,
       lng : coords.lng,
       zoom: coords.zoom,
-      currentArea: area
+      currentArea: area,
+      currentMarker: null
     })
 
   }
@@ -71,11 +76,14 @@ class Map extends React.Component{
     this.setState({currentMarker: marker})
   }
 
+  getCoords = (e) => {
+    console.log(e.getCenter())
+  }
+
   render(){
 
-    console.log(this.state.updateReactMapBox)
-
     let {lng, lat, zoom, currentMarker, currentArea} = this.state;
+    console.log(lat + lng)
 
     let coords;
     let zoomValue;
@@ -83,22 +91,34 @@ class Map extends React.Component{
     let mapjsx;
   
     if(this.state.markers && this.state.reactMapboxGl){
+      coords = [lng, lat]
+      zoomValue = [zoom];
+
+      console.log(MapBox)
 
       if (!currentMarker) currentMarker = '';
-      coords = [lng, lat]
-     zoomValue = [zoom];
+      else {
+        coords = currentMarker.coords;
+        zoomValue = [10];
+      }
 
       let area = this.state.currentArea === 'CPT' ? 'cpt' : 'country';
 
       markers = CPTmarkers[area].map((marker, i) => {
           return <Feature coordinates={marker.coords}
+                          key={i}
                           onClick={() =>this.showInfo(marker)}
                           properties={marker.name} />
         })
 
         mapjsx = (
           <div className={Styles.mapContainer}>
-          <MapBox movingMethod='flyTo' className={Styles.map} style="mapbox://styles/mapbox/streets-v8" center={coords} zoom={zoomValue}>
+          <MapBox movingMethod='flyTo' 
+                  className={Styles.map} 
+                  style="mapbox://styles/mapbox/streets-v8" 
+                  center={coords} 
+                  zoom={zoomValue}
+                  onClick={e => this.getCoords(e)}>
             <Layer type="symbol" layout={{"icon-image": "marker-15", "icon-size": 1.6}} paint={{"icon-color": "#c70202"}}>
               {markers}
             </Layer>
