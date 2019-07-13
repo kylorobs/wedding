@@ -32,7 +32,7 @@ var CPTmarkers = {
       text : "The Garden Route starts four hours outside Cape Town, and includes around 300km of coastline. Places on this route special to us include George, the Wilderness, Knysna and the final part of the route Tstisikamma Forest. Along this route are various little farm stalls – I would thoroughly recommend going into some of the more established ones such as the blue stork for a toastie ( my favourites a bacon and banana), bran muffin or a Pie - one of kyles favourites – what you will get looks more like a Cornish pasty but definitely worth the try."
     },
     {
-      coords : [22.45, -33.99],
+      coords : [22.45, -33.93],
       name : "George",
       text : "George has great sentimental value to chloe and her family, as it's where her Granny stays and is her ‘special place’. The outskirts, more perhaps than the town itself, is a must-see. The Wilderness beach is stunning and great for a long walk."
     },
@@ -42,7 +42,7 @@ var CPTmarkers = {
       text : "Further along the coast is Knysna. To get there you drive along a beautiful stretch of road overlooking the lagoon where the unique composition of fresh and salt water allow for an interesting mix of animals and plants including the kynsna seahorse, the research topic of a great friend of my granny and grandpa – professor Allanson. Legend also states there are still Knysna elephants stomping around the bush here so look out!"
     },
     {
-      coords : [22.45, -33.99],
+      coords : [22.45, -33.90],
       name : "Tsitsikamma National Park",
       text : "George has great sentimental value to chloe and her family, as it's where her Granny stays and is her ‘special place’. The outskirts, more perhaps than the town itself, is a must-see. The Wilderness beach is stunning and great for a long walk."
     },
@@ -59,12 +59,12 @@ var CPTmarkers = {
     {
       coords : [22.45, -33.99],
       name : "Kruger National Park",
-      text : ""
+      text : "dfdf"
     },
     {
       coords : [22.45, -33.99],
       name : "Sun City",
-      text : ""
+      text : "fd"
     },
     {
       coords : [22.45, -33.92],
@@ -72,10 +72,10 @@ var CPTmarkers = {
       text : "fff"
     },
     {
-      coords : [22.45, -33.94],
+      coords : [22.40, -33.94],
       name : "Grahamstown",
       text : "fff"
     }]
-}
+};
 
 export default CPTmarkers
