@@ -67,15 +67,15 @@ var CPTmarkers = {
       text : "."
     },
     {
-      coords : [22.45, -33.99],
+      coords : [22.45, -33.92],
       name : "Grahamstown",
-      text : "."
+      text : "fff"
     },
     {
-      coords : [22.45, -33.99],
+      coords : [22.45, -33.94],
       name : "Grahamstown",
-      text : "."
-    }],
+      text : "fff"
+    }]
 }
 
 export default CPTmarkers
