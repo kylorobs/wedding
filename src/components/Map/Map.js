@@ -83,7 +83,6 @@ class Map extends React.Component{
   render(){
 
     let {lng, lat, zoom, currentMarker, currentArea} = this.state;
-    console.log(lat + lng)
 
     let coords;
     let zoomValue;

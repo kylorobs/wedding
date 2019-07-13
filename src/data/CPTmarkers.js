@@ -47,9 +47,9 @@ var CPTmarkers = {
       text : "George has great sentimental value to chloe and her family, as it's where her Granny stays and is her ‘special place’. The outskirts, more perhaps than the town itself, is a must-see. The Wilderness beach is stunning and great for a long walk."
     },
     {
-      coords : [22.45, -33.99],
+      coords : [22.45, -33.98],
       name : "Grahamstown",
-      text : "."
+      text : "wdw"
     },
     {
       coords : [22.45, -33.99],
@@ -64,21 +64,6 @@ var CPTmarkers = {
     {
       coords : [22.45, -33.99],
       name : "Sun City",
-      text : "."
-    },
-    {
-      coords : [22.45, -33.99],
-      name : "Grahamstown",
-      text : "."
-    },
-    {
-      coords : [22.45, -33.99],
-      name : "Grahamstown",
-      text : "."
-    },
-    {
-      coords : [22.45, -33.99],
-      name : "Grahamstown",
       text : "."
     },
     {
