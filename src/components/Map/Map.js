@@ -24,18 +24,22 @@ class Map extends React.Component{
        type: null,
        currentArea: 'CPT',
        currentMarker: null,
+       screenSize: null,
        reactMapboxGl: null
 
   }
 
   componentDidMount(){
     let updateReactMapBox = null;
+    let screenSize;
     if (ReactMapboxGl){
       updateReactMapBox = true;
+      screenSize = window.innerWidth;
     }
     this.setState({
       markers: [...CPTmarkers.cpt], 
-      reactMapboxGl: updateReactMapBox 
+      reactMapboxGl: updateReactMapBox,
+      screenSize: screenSize
     });
 
   }
@@ -80,6 +84,12 @@ class Map extends React.Component{
     console.log(e.getCenter())
   }
 
+  closeMarkerWindow = () => {
+    this.setState({
+      currentMarker: null
+    })
+  }
+
   render(){
 
     let {lng, lat, zoom, currentMarker, currentArea} = this.state;
@@ -88,6 +98,7 @@ class Map extends React.Component{
     let zoomValue;
     let markers;
     let mapjsx;
+    let info;
   
     if(this.state.markers && this.state.reactMapboxGl){
       coords = [lng, lat]
@@ -110,8 +121,14 @@ class Map extends React.Component{
                           properties={marker.name} />
         })
 
+        let infoClass = [ Styles.mapInfo ];
+        let windowClose = null;
+        if (this.state.screenSize < 1300 && this.state.currentMarker){
+          infoClass.push(Styles.infoCenter);
+          windowClose = <div onClick={this.closeMarkerWindow} className={Styles.closeWindow}></div>
+        }
+
         mapjsx = (
-          <div className={Styles.mapContainer}>
           <MapBox movingMethod='flyTo' 
                   className={Styles.map} 
                   style="mapbox://styles/mapbox/streets-v8" 
@@ -126,7 +143,11 @@ class Map extends React.Component{
                 <Button active={currentArea === 'SA'} clickHandler={this.clickHandler} text="South Africa" id="SA" />
             </div>
           </MapBox>
-          <div className={Styles.mapInfo}>
+        );
+
+         info = (
+          <div className={infoClass.join(' ')}>
+            {windowClose}
             <div className={Styles.mapSelector}>
               <h2> Let's explore </h2>
               <div className={Styles.desktopButtons}>
@@ -136,17 +157,20 @@ class Map extends React.Component{
             </div>
             <h3> {currentMarker.name} </h3>
             <p> {currentMarker.text} </p>
-          </div>
         </div>
         );
     }
 
-    
+    console.log(this.state.screenSize);
 
       if (!this.state.reactMapboxGl) mapjsx = 'Loading'
 
     return (
-     mapjsx
+      <div className={Styles.mapContainer}>
+        { mapjsx }
+        { info }
+      </div>
+    
     )
   }
 }

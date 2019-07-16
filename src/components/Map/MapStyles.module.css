@@ -5,6 +5,7 @@
   margin: auto auto;
   height: 40em;
   padding: 4em;
+  position: relative;
 }
 
 .map{
@@ -14,6 +15,22 @@
   width: 40%;
   text-align: center;
 }
+
+.infoCenter {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
 
 .mapSelector {
   margin: auto;
@@ -34,11 +51,23 @@
   justify-content: center;
   align-items: center;
 }
+
 .controls {
   display: none;
 }
 
-@media only screen and (max-width: 500px){
+.closeWindow {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 2000;
+  background-color: red;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1300px){
   .mapContainer {
     height: auto;
     padding: 0em;
@@ -50,19 +79,27 @@
   }
   .mapInfo {
     width: 100%;
-    padding: 1em;
+    padding: 0 1em;
   }
 
   .controls {
     display: flex;
     flex-flow: column;
     position: absolute;
-    right: 0;
+    right: 10px;
     bottom: 0;
+    width: 8em;
   }
 
   .desktopButtons {
     display: none;
   }
 
+}
+
+@media only screen and (max-width: 800px){
+  .map {
+    height: 60vh;
+    width: 100%;
+  }
 }

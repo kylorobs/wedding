@@ -24,7 +24,122 @@ var CPTmarkers = {
     coords : [18.87, -33.83],
     name : "Natte Valleij",
     text : " Bla Bla Bla"
-  }],
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  },
+  {
+    coords : [],
+    name : "",
+    text : "",
+    url: ""
+  }
+],
   country :
     [{
       coords : [23.05, -34.04],
