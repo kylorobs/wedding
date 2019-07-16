@@ -3,6 +3,7 @@ import Styles from './MapStyles.module.css'
 import Button from '../Button/Button';
 import CPTmarkers from '../../data/CPTmarkers';
 import { Layer, Feature, } from "react-mapbox-gl";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // let mapboxgl;
 let ReactMapboxGl = null;
@@ -125,7 +126,13 @@ class Map extends React.Component{
         let windowClose = null;
         if (this.state.screenSize < 1300 && this.state.currentMarker){
           infoClass.push(Styles.infoCenter);
-          windowClose = <div onClick={this.closeMarkerWindow} className={Styles.closeWindow}></div>
+          windowClose = (
+            <div onClick={this.closeMarkerWindow} className={Styles.closeWindow}>
+               <FontAwesomeIcon
+                  icon="times-circle"
+                  color="#2e7f43"
+                  size="lg"/>
+            </div>)
         }
 
         mapjsx = (

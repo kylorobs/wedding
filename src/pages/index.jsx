@@ -7,7 +7,12 @@ import Map from '../components/Map/Map'
 import Invitation from '../components/Invitation/Invitation'
 import Accommodation from '../components/Accommodation/Accommodation'
 import Activities from '../components/Activities/Activities'
-import Form from '../components/RSVP/Form/Form'
+import Form from '../components/RSVP/Form/Form';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope, faKey, faTimesCircle} from '@fortawesome/free-solid-svg-icons';
+library.add(faEnvelope, faKey, faTimesCircle);
+
+
 
 class Index extends React.Component {
   render() {
