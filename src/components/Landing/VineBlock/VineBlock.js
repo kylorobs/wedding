@@ -189,7 +189,7 @@ setRotation_Width_Stroke = (vine, rotation, width, stroke) =>{
 
   render(){
     let position = this.props.position;
-    let svgs = "waiting"
+    let svgs = null;
     if(this.state.svgs.length > 1){
       svgs = this.state.svgs.map((svg, i) => {
         return <Vine svg={svg} key={i} appendTo={position} />

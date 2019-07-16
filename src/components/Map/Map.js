@@ -100,6 +100,7 @@ class Map extends React.Component{
     let markers;
     let mapjsx;
     let info;
+    let markerLink = null;
   
     if(this.state.markers && this.state.reactMapboxGl){
       coords = [lng, lat]
@@ -135,6 +136,8 @@ class Map extends React.Component{
             </div>)
         }
 
+        if(currentMarker.url) markerLink = <a  target="_blank" href={currentMarker.url}>{currentMarker.url}</a>
+
         mapjsx = (
           <MapBox movingMethod='flyTo' 
                   className={Styles.map} 
@@ -164,11 +167,11 @@ class Map extends React.Component{
             </div>
             <h3> {currentMarker.name} </h3>
             <p> {currentMarker.text} </p>
+            {markerLink}
+           
         </div>
         );
     }
-
-    console.log(this.state.screenSize);
 
       if (!this.state.reactMapboxGl) mapjsx = 'Loading'
 
