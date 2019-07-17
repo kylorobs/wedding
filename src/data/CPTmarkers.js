@@ -6,11 +6,6 @@ var CPTmarkers = {
     text : "On route to the Penguins, a stop off in Simonstown is well worth the visit. It’s one of the oldest towns and home to the South African Naval Base. The buildings and their balconies make it really quite picturesque and there is a few good coffee spots. "
   },
   {
-    coords : [18.41, -33.90],
-    name : "Green Point Stadium",
-    text : "Beautiful little fishing harbour separating Muzenburg and Simonstown. You can walk on a boardwalk path next the water beyond the train tracks here. Coming out of Kalk bay you reach the harbour where fisherman still come in here during the day and lay out their fish on old brick tables near the water. This is where I learnt how big tunas are and that you have to take the ‘poo pipe’ out of prawns. Its also where I had my first drink with Trevor and Wendy – I had a Long Island Ice Tea accompanied by my first oyster – which was obviously vile and probably not the best choice of meet the boyfriends parents foods. Stroll around and look in all the little shops. There are some interesting clothes shops, trinckety homeware type shops and great cafes. This is also where I go in search of a hair braid every holiday - you are never too old and there is a lovely lady with dreads who will chat away and tell you about people watching in Kalkies!. There is an old antique shop full of crap in my opinion but Kyle likes a browse. We spend many an hour in here when he and Matt were sourcing props for both ‘Finding Grahamstown’ and ‘…’.Try any flavour in the ice cream shop and pop your head into the old door at the side of the Olympia Bakery. It doesn’t look so clean but you can see into the kitchen some days and everything is delicious."
-  },
-  {
     coords : [18.41, -33.96],
     name : "Table Mountain",
     text : "You can opt to hike up table mountain via various different routes. Table Mountain National Park stretches from Signal Hill in the city to Cape Point in the south (60 odd kilometers) with numerous access points for walks at Tokai, Cecilia Forest, Constantia Nek, Rhodes Memorial and Silvermine. The reward depending on your preference for heights is the cable car down."
@@ -18,7 +13,7 @@ var CPTmarkers = {
   {
     coords : [18.38, -33.93],
     name : "Lion's Head",
-    text : "A short (max 2 hours), easyish hike (where it gets ropey there are metal chains) giving you great views of Cape Town.Views incorporate the City bowl, the Twelve Apostles, the ocean, as well as look towards Table Mountain. "
+    text : "A short (max 2 hours), easyish hike (where it gets ropey there are metal chains) giving you great views of Cape Town. Views incorporate the City bowl, the Twelve Apostles, the ocean, as well as look towards Table Mountain. "
   },
   {
     coords : [18.87, -33.83],
@@ -28,7 +23,7 @@ var CPTmarkers = {
   {
     coords : [18.47, -34.35],
     name : "Cape of Good Hope",
-    text : "Continue winding round the peninsula and you get to the national park – Cape of Good Hope. Get here early there are often long long queues of cars. You can take a walk to the end of the rock. Its really beautiful and there are also beaches you can only reach by foot.",
+    text : "Continue winding round the peninsula and you get to the national park – Cape of Good Hope. Get here early as there is often a long long queue of cars. You can take a walk to the end of the rock. It's really beautiful and there are also beaches you can only reach by foot.",
     url: "https://capepoint.co.za/visitor-info/"
   },
   {
@@ -75,8 +70,8 @@ var CPTmarkers = {
   },
   {
     coords : [18.42, -33.90],
-    name : "The Waterfront",
-    text : "Super super touristy but I think worth the visit. There is lovely jewellery, clothes (including Granadilla Swim Trunks last time we were here), pottery, a lot of memorabilia ( cheaper than the airport if you want something) and nearby there is also the V and A food market. Kyle and I came here after he proposed and we had the best Iced coffees in the world.",
+    name : "The VA Waterfront",
+    text : "Super super touristy but I think worth the visit. There is lovely jewellery, clothes (including Granadilla Swim Trunks last time we were here), pottery, a lot of memorabilia ( cheaper than the airport if you want something) and nearby there is also the V and A food market. Kyle and I came here after he proposed and we had the best Iced coffees in the world. It's also where Kyle spent a month doing his sailing course.",
     url: "https://www.waterfront.co.za/markets/va-food-market/"
   },
   {
@@ -110,27 +105,39 @@ var CPTmarkers = {
     url: "https://www.capetown.travel/travel-like-a-local-your-neighbourhood-guide-to-hout-bay/"
   },
   {
+    coords : [18.46, -34.20],
+    name : "Dorries Drive",
+    text : "Kyle's family home in Simon's Town. When his parents Wendy & Trevor bought it, he and his brother couldn't believe they had decided to move into an old granny's house. Now it's their favourite place in the world. Turns out parents do know more...sometimes.",
+    url: ''
+  },
+  {
     coords : [18.35, -34.08],
     name : "Chapman's Peak",
-    text : "If there’s one drive you do around Cape Town, make sure it’s this one!. Lots of the globally famous sporting events use this stretch including The Argos and also the Two Oceans Marathon. You can stop at the side of the road to take photos of a really spectacular view.",
+    text : "If there’s one drive you do around Cape Town, make sure it’s this one! Lots of the globally famous sporting events use this stretch including The Argos and also the Two Oceans Marathon. You can stop at the side of the road to take photos of a really spectacular view.",
     url: "https://www.chapmanspeakdrive.co.za/"
   },
   {
     coords : [18.38, -34.09],
     name : "Cape Point Vineyards",
-    text : "Besides around Constantia, this is one of the most easily accessible vineyards from central CT. It over-looks the beach and has beautiful sunsets. It lacks any snobby vineyard feel and there is a market that happens on a Thursday with loads of different food stalls and live music.",
+    text : "One of our favourite spots, Kyle's mother loved the evening picnics here - and we have organised a get-together before the wedding (see beloe). Besides around Constantia, this is one of the most easily accessible vineyards from central CT. It over-looks the beach and has beautiful sunsets. It lacks any snobby vineyard feel, and the Thursday market features loads of different food stalls and live music.",
     url: "http://cpv.co.za/community-market/"
+  },
+  {
+    coords : [18.49, -33.82],
+    name : "Blouberg",
+    text : "Kyle's favorite kitesurfing spot. On a windy afternoon there will be hundreds of kites in the sky. Head to Blue Peter for lunch and enjoy the view of Table Mountain .",
+    url: "http://www.bluepeter.co.za/"
   },
   {
     coords : [18.39, -34.09],
     name : "Noordhoek",
-    text : "This marks the spot where of a doomed date. Kyle organised a fabulous horse ride along this stunning stretch of beach which is over 10 km longs. It wasn’t so romantic when Chloe fell off her horse. There is a great Sushi restaurant, Village Sushi and also The Toad which is a favourite for me and Kyle.",
+    text : "This marks the spot of Kyle's doomed date. He organised a fabulous horse ride along this stunning stretch of beach which is over 10 km longs. It wasn’t so romantic when Chloe fell off her horse... There is a great Sushi restaurant, Village Sushi and also The Toad which is a favourite.",
     url: "https://www.thetoad.co.za/"
   },
   {
     coords : [18.40, -33.90],
     name : "Green Point",
-    text : "Just along the coast from Clifton this is where the big football stadium built for the World Cup – and Kyle’s mom introduced it to me as a really great place to do a boardwalk run. Its flat, and there’s lots going on to distract you from km counting!",
+    text : "Just along the coast from Clifton this is where the big football stadium built for the World Cup – and Kyle’s mom introduced it to Chloe as a really great place to do a boardwalk run. Its flat, and there’s lots going on to distract you from km counting!",
     url: "https://www.capetown.travel/travel-like-a-local-your-neighbourhood-guide-to-green-point/"
   }
 ],
@@ -138,12 +145,12 @@ var CPTmarkers = {
     [{
       coords : [22.04, -33.70],
       name : "Garden Route",
-      text : "The Garden Route starts four hours outside Cape Town, and includes around 300km of coastline. Places on this route special to us include George, the Wilderness, Knysna and the final part of the route Tstisikamma Forest. Along this route are various little farm stalls – I would thoroughly recommend going into some of the more established ones such as the blue stork for a toastie ( my favourites a bacon and banana), bran muffin or a Pie - one of kyles favourites – what you will get looks more like a Cornish pasty but definitely worth the try."
+      text : "The Garden Route starts four hours outside Cape Town, and includes around 300km of coastline. Places on this route special to us include George, the Wilderness, Knysna and the final part of the route Tstisikamma Forest. Along this route are various little farm stalls – I would thoroughly recommend going into some of the more established ones such as the blue stork for a toastie ( my favourites a bacon and banana), bran muffin or a pie - one of kyles favourites – what you will get looks more like a Cornish pasty but definitely worth the try."
     },
     {
       coords : [22.45, -33.98],
       name : "George",
-      text : "George has great sentimental value to chloe and her family, as it's where her Granny stays and is her ‘special place’. The outskirts, more perhaps than the town itself, is a must-see. The Wilderness beach is stunning and great for a long walk."
+      text : "George has great sentimental value to Chloe and her family, as it's where her Granny stays and is her ‘special place’. The outskirts, more perhaps than the town itself, is a must-see. The Wilderness beach is stunning and great for a long walk."
     },
     {
       coords : [23.04, -34.03],
@@ -153,27 +160,37 @@ var CPTmarkers = {
     {
       coords : [23.86, -34.01],
       name : "Tsitsikamma National Park",
-      text : "The Tsitsikamma forest is a a marine reserve, featuring gorges, a bungee jump and the Big Tree. After 3 weeks in the bush accompanying 60 grade 10s kyle surprised me on a road trip down to meet his parents by booking us into a cabin in the woods here. Whilst here we went on a ‘little walk’ and three hours later and barefoot came across a magnificent waterfall."
+      text : "The Tsitsikamma forest is a a marine reserve, featuring fantastic gorges, a bungee jump and the Big Tree. After 3 weeks in the bush accompanying 60 Grade 10s, Kyle surprised me on a road trip down to meet his parents by booking us into a cabin in the woods here. Whilst here we went on a ‘little walk’ and three hours later and barefoot came across a magnificent waterfall."
     },
     {
       coords : [22.45, -33.98],
       name : "Grahamstown",
-      text : "Grahamstown is where my mom was brought up and went to school. This is where me and Kyle met when I was on my ‘gap yah’ and teaching in the Town. Its also home to Rhodes University of which you are sure to see the calabre and lets say spirit of the graduates it produces at our wedding, penny included! "
+      text : "Grahamstown is where my mom was brought up and went to school. It's also where Kyle and I met when I was on my ‘gap yah’ and teaching in the town. It's home to Rhodes University, and be sure that you will witness the true calabre and 'spirit' of the graduates it produces at our wedding! "
     },
     {
-      coords : [26.20, -28.04],
+      coords : [28.04, -26.20],
       name : "Johannesburg",
-      text : "Johannesburg is where kyle spent most of his childhood."
+      text : "Johannesburg is where Kyle spent most of his childhood. He often tries to pretend he is not from there. It's a great city to visit, with places like Soweto, the Apartheid Museum and the Cradle of Humankind worth a visit."
     },
     {
-      coords : [23.98, -31.55],
+      coords : [31.56, -23.99],
       name : "Kruger National Park",
       text : "Kruger is in the North East part of South Africa. This is the prime place to see the Big Five: Elephant, Lion, Rhino, Leopard and Buffalo. We have only been once together but i (Chloe) can definitley say its one of the best experiences i have ever had so many more visits to come! Here you can drive around looking at the wildlife yourself or go the 'giant pansy route' slash more informative route and go with guides."
     },
     {
-      coords : [22.45, -33.99],
+      coords : [30.71, -30.71],
+      name : "Kelso",
+      text : "A very special place to the Robinsons. Kyle's dad Trevor and his brothers used to spend their school holidays here at the beach house- and his sons and nieces ended up doing exactly the same. It's the source of Kyle's love for paddle-skiing and the ocean, and is now the home of his Uncle and Aunt."
+    },
+    {
+      coords : [31.22, -24.26],
+      name : "Elephant's Drift",
+      text : "A much loved game farm owned and run by Kyle's aunt Karen and husband Richard, it turns out Chloe's mom and Dad got engaged in this very place! Located in the Klaserie Private Game Reserve bordering Kruger National Park, this area is wild and beautiful."
+    },
+    {
+      coords : [27.10, -25.35],
       name : "Sun City",
-      text : "fd"
+      text : "If you are looking for a resort close to Joburg, look no further. It's touristy, and may feel like you stepped into the set of Lion King, but there's a wave pool, water slides, restaurants and casino. Kyle once felt proud entering an Under 18 club here."
       }]
   };
   

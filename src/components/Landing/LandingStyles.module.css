@@ -28,6 +28,12 @@
     animation: text-focus-in 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s forwards;
 }
 
+.vineCenter p {
+  opacity: 0;
+  color: #ce9f13;
+  animation: text-focus-in 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s forwards;
+}
+
 .vineLeftContainer{
   grid-area: vineLeft;
   width: 100%;

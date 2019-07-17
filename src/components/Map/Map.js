@@ -77,8 +77,16 @@ class Map extends React.Component{
 
   }
 
-  showInfo(marker){
-    this.setState({currentMarker: marker})
+  showInfo(e, marker){
+    let zoom = e.map.getZoom();
+    console.log(this.state.currentArea)
+    if (zoom <= 7 && this.state.currentArea === 'SA') zoom = zoom + 1;
+    if (zoom <= 11 && this.state.currentArea === 'CPT') zoom = zoom + 1;
+
+    this.setState({
+      currentMarker: marker,
+      zoom: zoom
+    })
   }
 
   getCoords = (e) => {
@@ -106,12 +114,9 @@ class Map extends React.Component{
       coords = [lng, lat]
       zoomValue = [zoom];
 
-      console.log(MapBox)
-
       if (!currentMarker) currentMarker = '';
       else {
         coords = currentMarker.coords;
-        zoomValue = [10];
       }
 
       let area = this.state.currentArea === 'CPT' ? 'cpt' : 'country';
@@ -119,7 +124,7 @@ class Map extends React.Component{
       markers = CPTmarkers[area].map((marker, i) => {
           return <Feature coordinates={marker.coords}
                           key={i}
-                          onClick={() =>this.showInfo(marker)}
+                          onClick={(e) =>this.showInfo(e, marker)}
                           properties={marker.name} />
         })
 
@@ -159,7 +164,7 @@ class Map extends React.Component{
           <div className={infoClass.join(' ')}>
             {windowClose}
             <div className={Styles.mapSelector}>
-              <h2> Let's explore </h2>
+              <h2> Fun Facts and Tips </h2>
               <div className={Styles.desktopButtons}>
                 <Button active={currentArea === 'CPT'} clickHandler={this.clickHandler} text="Cape Town" id="CPT"  />
                 <Button active={currentArea === 'SA'} clickHandler={this.clickHandler} text="South Africa" id="SA" />
@@ -172,9 +177,9 @@ class Map extends React.Component{
         </div>
         );
     }
-
+     
       if (!this.state.reactMapboxGl) mapjsx = 'Loading'
-
+    
     return (
       <div className={Styles.mapContainer}>
         { mapjsx }
