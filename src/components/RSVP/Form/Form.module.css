@@ -40,6 +40,12 @@
     border: none;
 }
 
+@media only screen and (max-width: 1200px){
+    .FormContainer{
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 900px){
     .Form {
         width: 90%;
@@ -66,6 +72,6 @@
         border: 1px solid black;
         font-size: 1em;
         padding: 0.5em;
-        width: 5em;
+        width: 7em;
     }
 }

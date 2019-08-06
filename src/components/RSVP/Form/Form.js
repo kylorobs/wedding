@@ -23,17 +23,31 @@ const attendeeData = {
             required: true
         }
     },
-    vegetarian: {
-        field: 'vegetarian',
-        elementType: 'radio',
+    dietary: { 
+        field: 'dietary',
+        elementType: 'input',
         value: '',
-        label: 'Vegetarian?',
+        label: '',
         valid: false,
         config: {
-            type:'checkbox',
+            type: 'text',
+            placeholder: 'Any dietary requirements'
         },
-        validation: {}
+        validation: {
+            required: true
+        }
     },
+    // vegetarian: {
+    //     field: 'vegetarian',
+    //     elementType: 'radio',
+    //     value: '',
+    //     label: 'Vegetarian?',
+    //     valid: false,
+    //     config: {
+    //         type:'checkbox',
+    //     },
+    //     validation: {}
+    // },
     attending : {
         field: 'attending',
         elementType: 'select',
@@ -52,7 +66,7 @@ const attendeeData = {
             required: true
         }
     }
-}
+};
 
 class Form extends React.Component{
 
@@ -74,17 +88,31 @@ class Form extends React.Component{
                             required: true
                         }
                     },
-                    vegetarian: {
-                        field: 'vegetarian',
-                        elementType: 'radio',
+                    dietary: { 
+                        field: 'dietary',
+                        elementType: 'input',
                         value: '',
-                        label: 'Vegetarian?',
+                        label: '',
                         valid: false,
                         config: {
-                            type:'checkbox',
+                            type: 'text',
+                            placeholder: 'Any dietary requirements'
                         },
-                        validation: {}
+                        validation: {
+                            required: true
+                        }
                     },
+                    // vegetarian: {
+                    //     field: 'vegetarian',
+                    //     elementType: 'radio',
+                    //     value: '',
+                    //     label: 'Vegetarian?',
+                    //     valid: false,
+                    //     config: {
+                    //         type:'checkbox',
+                    //     },
+                    //     validation: {}
+                    // },
                     attending : {
                         field: 'attending',
                         elementType: 'select',
@@ -128,8 +156,9 @@ class Form extends React.Component{
         e.preventDefault();
         let newAttendee = {...attendeeData};
         newAttendee.name = {...attendeeData.name};
-        newAttendee.vegetarian = {...attendeeData.vegetarian};
+        // newAttendee.vegetarian = {...attendeeData.vegetarian};
         newAttendee.attending = {...attendeeData.attending}
+        newAttendee.dietary = {...attendeeData.dietary}
         let form = {...this.state.form};
         form.attendees['attendee' + (Object.keys(form.attendees).length + 1)] = newAttendee;
         this.setState({form: form})
@@ -162,7 +191,8 @@ class Form extends React.Component{
         rsvp.attendees = attendees.map(att => {
                return { name: att.name.value,
                         attending: att.attending.value,
-                        vegetarian: att.vegetarian.value
+                        // vegetarian: att.vegetarian.value,
+                        dietary: att.dietary.value
                        }
         });
         rsvp.message = this.state.form.message.value;
@@ -170,8 +200,6 @@ class Form extends React.Component{
         axios.post('/rsvps.json', rsvp)
             .then(res =>{
                 this.setState({loading: false})
-                console.log("request sent");
-                console.log(res)
                 navigate('/thankyou')
             })
             .catch(er => {

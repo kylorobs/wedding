@@ -165,6 +165,7 @@ class Map extends React.Component{
             {windowClose}
             <div className={Styles.mapSelector}>
               <h2> Fun Facts and Tips </h2>
+              <p>Click on the pins in the map to see our favourite spots!</p>
               <div className={Styles.desktopButtons}>
                 <Button active={currentArea === 'CPT'} clickHandler={this.clickHandler} text="Cape Town" id="CPT"  />
                 <Button active={currentArea === 'SA'} clickHandler={this.clickHandler} text="South Africa" id="SA" />

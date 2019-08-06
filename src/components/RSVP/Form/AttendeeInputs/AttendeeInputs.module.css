@@ -11,5 +11,7 @@
 @media only screen and (max-width: 900px){
     .Person {
        flex-wrap: wrap;
+       background-color: #2e7f4324;
     }
 }
+

@@ -38,12 +38,32 @@
     margin: 0 2em;
 }
 
+@media (max-width: 1300px){
+
+    .Input {
+        font-size: 1.2em;
+    }
+
+}
+
+@media (max-width: 900px){
+    .Select {
+        margin: 1em;
+    }
+
+    .Input {
+        font-size: 1.1em;
+        margin: 1em;
+    }
+
+}
+
 @media (max-width: 500px){
     .Input {
-        margin: 2em 0.5em;
-        margin-bottom: 0.5em;
+        margin:1em;
         font-size: 1em;
     }
+    
     .Checkbox{
         font-size: 1em;
         width: 4em;

@@ -13,40 +13,34 @@ const Activities = () => {
     
     return (
         <div className='imageText'>
-            <p>As many of us are travelling from all over the world to be at our wedding, we have planned a few get-togetheres before and after to experience Cape Town together. There is no obligation to be at present at any of these, and feel free to pick and choose whatever takes your fancy.</p>
+            <p>As many of us are travelling from all over the world to be at our wedding, we have planned a few get-togethers before and after to experience Cape Town. There is no obligation to be at present at any of these, and feel free to pick and choose whatever takes your fancy.</p><p><strong> We will email you in December for more information about each activity.</strong></p>
             <ImageText 
                  image={kirst} 
-                 date="9th January TBC"
-                 header="Evening picnic / Foodmarket"
+                 date="9th January"
+                 header="Evening picnic / foodmarket"
                  text="Cape Point Vineyards has some of the best views in Cape Town. It overlooks the beach and has beautiful sunsets - the perfect picnic spot. The Thursday market features loads of different food stalls and live music."
             />
             <ImageText 
                  image={parkrun} 
-                 date="11th January TBC"
+                 date="11th January"
                  header="Paarl park run"
                  text="For the energetic, chloe will be doing a park run (yep, on the day of the wedding)."
             />
              <ImageText 
                  image={lions} 
-                 date="13th January TBC"
-                 header="Sundowners on Lions Head"
-                 text="Lions Head offers spectacular views of the cape town city and coastline, especially with it being full moon. It's even beter with a drink in hand! The walk takes approx 2 hours - and is very dependant on weather."
+                 date="13th January"
+                 header="Sundowners on Signal Hill"
+                 text="Signal Hill offers spectacular views of the cape town city and coastline, especially with it being full moon. It's even beter with a drink in hand! You can drive there or walk up, and we will book a picnic spot from 5pm."
             /> 
             <ImageText 
                  image={clifton} 
-                 date="14th January TBC"
+                 date="14th January"
                  header="Clifton/Camps Bay AM"
                  text="We will be having a morning beach session, followed by drinks in Camps Bay. Beware the nudists!"
             />
             <ImageText 
-                 image={table} 
-                 date="15th January TBC"
-                 header="Hike up Table Mountain"
-                 text="Now one of the 7 Natural Wonders of the World, the best way to experience Table Mountain is to walk up it! This will take 3-4 hours, and we will come down via cable car."
-            />
-            <ImageText 
                  image={penguins} 
-                 date="19th January TBCs"
+                 date="19th January"
                  header="Boulder's Beach Penguins"
                  text="Just a short walk from Kyle's Simon's Town home, be prepared to mingle with some penguins. Drinks and snacks at Kyle's house will follow."
             />

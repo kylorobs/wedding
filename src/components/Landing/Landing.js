@@ -11,7 +11,6 @@ const Landing = (props) => {
         <VineBlock position="Top"/>
         <VineBlock position="Bottom"/>
         <div className={LandingStyles.vineCenter}>
-          {/* <h1> Chloe and Kyle<br></br> are getting married!</h1> */}
           {props.children}
         </div>
    </div>

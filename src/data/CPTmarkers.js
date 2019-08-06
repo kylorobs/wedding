@@ -119,7 +119,7 @@ var CPTmarkers = {
   {
     coords : [18.38, -34.09],
     name : "Cape Point Vineyards",
-    text : "One of our favourite spots, Kyle's mother loved the evening picnics here - and we have organised a get-together before the wedding (see beloe). Besides around Constantia, this is one of the most easily accessible vineyards from central CT. It over-looks the beach and has beautiful sunsets. It lacks any snobby vineyard feel, and the Thursday market features loads of different food stalls and live music.",
+    text : "One of our favourite spots, Kyle's mother loved the evening picnics here - and we have organised a get-together before the wedding (see below). Besides around Constantia, this is one of the most easily accessible vineyards from central CT. It over-looks the beach and has beautiful sunsets. It lacks any snobby vineyard feel, and the Thursday market features loads of different food stalls and live music.",
     url: "http://cpv.co.za/community-market/"
   },
   {
@@ -178,7 +178,7 @@ var CPTmarkers = {
       text : "Kruger is in the North East part of South Africa. This is the prime place to see the Big Five: Elephant, Lion, Rhino, Leopard and Buffalo. We have only been once together but i (Chloe) can definitley say its one of the best experiences i have ever had so many more visits to come! Here you can drive around looking at the wildlife yourself or go the 'giant pansy route' slash more informative route and go with guides."
     },
     {
-      coords : [30.71, -30.71],
+      coords : [30.74, -30.32],
       name : "Kelso",
       text : "A very special place to the Robinsons. Kyle's dad Trevor and his brothers used to spend their school holidays here at the beach house- and his sons and nieces ended up doing exactly the same. It's the source of Kyle's love for paddle-skiing and the ocean, and is now the home of his Uncle and Aunt."
     },
@@ -194,6 +194,6 @@ var CPTmarkers = {
       }]
   };
   
-  export default CPTmarkers
+  export default CPTmarkers;
 
 

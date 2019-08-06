@@ -63,7 +63,7 @@
 }
 
 
-@media only screen and (max-width: 780px ){
+@media only screen and (max-width: 1000px ){
   .content-strip {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -80,7 +80,7 @@
 
 }
 
-@media only screen and (max-width: 500px ){
+@media only screen and (max-width: 1000px ){
 
   .content-strip {
     height: auto;
