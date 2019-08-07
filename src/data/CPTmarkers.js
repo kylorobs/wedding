@@ -18,7 +18,7 @@ var CPTmarkers = {
   {
     coords : [18.87, -33.83],
     name : "Natte Valleij",
-    text : " The venue for the Wedding! It's a historic farm set on the lower slopes of the Simonsberg mountains and within easy reach of Paarl, Stellenbosch, Franchhoek and Cape Town. We fell in love with it as the gardens look similar to Chloe's grandparents place in George. "
+    text : " The venue for the Wedding! It's a historic farm set on the lower slopes of the Simonsberg mountains and within easy reach of Paarl, Stellenbosch, Franschhoek and Cape Town. We fell in love with it as the gardens look similar to Chloe's grandparents place in George. "
   },
   {
     coords : [18.47, -34.35],

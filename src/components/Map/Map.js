@@ -79,12 +79,11 @@ class Map extends React.Component{
 
   showInfo(e, marker){
     let zoom = e.map.getZoom();
-    console.log(this.state.currentArea)
-    if (zoom <= 7 && this.state.currentArea === 'SA') zoom = zoom + 1;
-    if (zoom <= 11 && this.state.currentArea === 'CPT') zoom = zoom + 1;
-
+    let coords = e.map.getCenter();
     this.setState({
       currentMarker: marker,
+      lat: marker.coords[1],
+      lng: marker.coords[0],
       zoom: zoom
     })
   }
@@ -118,6 +117,8 @@ class Map extends React.Component{
       else {
         coords = currentMarker.coords;
       }
+
+      console.log(coords)
 
       let area = this.state.currentArea === 'CPT' ? 'cpt' : 'country';
 
