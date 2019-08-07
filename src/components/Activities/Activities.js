@@ -18,7 +18,7 @@ const Activities = () => {
                  image={kirst} 
                  date="9th January"
                  header="Evening picnic / foodmarket"
-                 text="Cape Point Vineyards has some of the best views in Cape Town. It overlooks the beach and has beautiful sunsets - the perfect picnic spot. The Thursday market features loads of different food stalls and live music."
+                 text="Cape Point Vineyards has some of the best views in Cape Town. It overlooks the beach and has beautiful sunsets - the perfect picnic spot. This will be a very relaxed and informal gathering while we enjoy the food stalls and live music."
             />
             <ImageText 
                  image={parkrun} 

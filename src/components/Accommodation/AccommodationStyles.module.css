@@ -35,7 +35,9 @@
     border: 1px solid #2e7f43;
     border-bottom: none;
     border-top: none;
+    background-color: #ce9f132e;
 }
+
 
 .infoBlock {
     font-size: 1em;

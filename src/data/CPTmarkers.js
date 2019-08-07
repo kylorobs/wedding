@@ -16,7 +16,7 @@ var CPTmarkers = {
     text : "A short (max 2 hours), easyish hike (where it gets ropey there are metal chains) giving you great views of Cape Town. Views incorporate the City bowl, the Twelve Apostles, the ocean, as well as look towards Table Mountain. "
   },
   {
-    coords : [18.87, -33.83],
+    coords : [18.88, -33.834],
     name : "Natte Valleij",
     text : " The venue for the Wedding! It's a historic farm set on the lower slopes of the Simonsberg mountains and within easy reach of Paarl, Stellenbosch, Franschhoek and Cape Town. We fell in love with it as the gardens look similar to Chloe's grandparents place in George. "
   },
@@ -33,13 +33,13 @@ var CPTmarkers = {
     url: "http://www.theoldbiscuitmill.co.za/"
   },
   {
-    coords : [18.44, -34.12],
+    coords : [18.45, -34.13],
     name : "Kalk Bay",
     text : "A beautiful little fishing harbour between Muizenburg and Fish Hoek, perfect for a leisurely stroll and cocktail. This is where Chloe had her first drink with Kyle’s parents:  a Long Island Ice Tea accompanied with oysters – which naturally Chloe found ‘vile’.",
     url: "http://www.capetown.travel/visitors/city-areas/south-peninsula/travel-like-a-local-your-neighbourhood-guide-to-kalk-bay/"
   },
   {
-    coords : [18.45, -34.12],
+    coords : [18.45, -34.123],
     name : "The Brass Bell - Kalk Bay",
     text : "This is a restaurant in the centre of the village right near the train station. There is sometimes live music in here but it’s a good place to go for a drink and watch the waves with yummy pizzas. Kyle and his friends have stumbled out of here after a good New Year’s eve.",
     url: "www.brassbell.co.za"
@@ -51,13 +51,13 @@ var CPTmarkers = {
     url: "www.capetocuba.com"
   },
   {
-    coords : [18.49, -34.08],
+    coords : [18.47, -34.10],
     name : "Muizenberg Beach",
     text : "The beach with the colourful huts. Here you can hire a board and learn to surf, sit on the beach with some ice cream, or wander over to Tiger’s Milk or Knead to sit in the window with a book. Chloe has spent a good few hours sitting in both wonderful sunshine and torrential wind as this is one of Kyle’s kite surfing spots. ",
     url: "http://muizenberg.info/restaurants/knead-bakery"
   },
   {
-    coords : [18.37, -33.93],
+    coords : [18.38, -33.93],
     name : "Clifton Beach",
     text : "One of the most famous of Cape Town beaches, this is not to miss. There’s no wind so it can get sweltering hot, but be warned the sea might give you a heart attack. This is very much the territory of the rich and famous. Views away from the beach are just as good, with the Clifton Mansion towering above you",
     url: "https://www.instagram.com/granadilla.swim/?hl=en"
@@ -81,7 +81,7 @@ var CPTmarkers = {
     url: "https://www.sanbi.org/gardens/kirstenbosch/"
   },
   {
-    coords : [18.45, -34.19],
+    coords : [18.45, -34.20],
     name : "Boulders Beach",
     text : "Just down the road from Kyle’s house is Boulder’s Beach – home to the penguins ☺ You have to pay an entrance fee, and it is worth going super early as it can be crowded. But what could be worth more than a penguin waddling past you while you sunbathe?",
     url: "https://www.sanparks.org/parks/table_mountain/tourism/attractions.php#boulders"
@@ -99,7 +99,7 @@ var CPTmarkers = {
     url: "https://www.youtube.com/watch?v=aANRjsFK8D8"
   },
   {
-    coords : [18.36, -34.02],
+    coords : [18.35, -34.05],
     name : "Hout Bay",
     text : "Hout Bay, on the northern side of Chapman's Peak Drive, is a twenty-minute drive from Cape Town. There is an inside market here selling again everything from clothes, jewellery, vintage clothes, beaded stuff and artwork. Like anywhere it seems also delicious food stalls selling both south African delicacies such as bunny chows and shwarmas, but also snazzy G and Ts, cronuts and good coffee.",
     url: "https://www.capetown.travel/travel-like-a-local-your-neighbourhood-guide-to-hout-bay/"
@@ -111,7 +111,7 @@ var CPTmarkers = {
     url: ''
   },
   {
-    coords : [18.35, -34.08],
+    coords : [18.35, -34.09],
     name : "Chapman's Peak",
     text : "If there’s one drive you do around Cape Town, make sure it’s this one! Lots of the globally famous sporting events use this stretch including The Argos and also the Two Oceans Marathon. You can stop at the side of the road to take photos of a really spectacular view.",
     url: "https://www.chapmanspeakdrive.co.za/"
@@ -123,13 +123,13 @@ var CPTmarkers = {
     url: "http://cpv.co.za/community-market/"
   },
   {
-    coords : [18.49, -33.82],
+    coords : [18.46, -33.80],
     name : "Blouberg",
     text : "Kyle's favorite kitesurfing spot. On a windy afternoon there will be hundreds of kites in the sky. Head to Blue Peter for lunch and enjoy the view of Table Mountain .",
     url: "http://www.bluepeter.co.za/"
   },
   {
-    coords : [18.39, -34.09],
+    coords : [18.36, -34.10],
     name : "Noordhoek",
     text : "This marks the spot of Kyle's doomed date. He organised a fabulous horse ride along this stunning stretch of beach which is over 10 km longs. It wasn’t so romantic when Chloe fell off her horse... There is a great Sushi restaurant, Village Sushi and also The Toad which is a favourite.",
     url: "https://www.thetoad.co.za/"

@@ -79,7 +79,6 @@ class Map extends React.Component{
 
   showInfo(e, marker){
     let zoom = e.map.getZoom();
-    let coords = e.map.getCenter();
     this.setState({
       currentMarker: marker,
       lat: marker.coords[1],
@@ -91,6 +90,14 @@ class Map extends React.Component{
   getCoords = (e) => {
     console.log(e.getCenter())
   }
+
+  onHover = (e, cursor) => {
+    // console.log(e.map)
+    e.map.getCanvas().style.cursor = cursor;
+    // cssText: "position: absolute; width: 318px; height: 400px; cursor: pointer; background-color: red;"
+  }
+
+
 
   closeMarkerWindow = () => {
     this.setState({
@@ -121,9 +128,16 @@ class Map extends React.Component{
       console.log(coords)
 
       let area = this.state.currentArea === 'CPT' ? 'cpt' : 'country';
+      let propers = {
+          'marker-color': '#3bb2d0',
+          'marker-size': 'large',
+          'marker-symbol': 'rocket'
+      }
 
       markers = CPTmarkers[area].map((marker, i) => {
           return <Feature coordinates={marker.coords}
+                          onMouseEnter={(e)=> this.onHover(e, 'pointer')}
+                          onMouseLeave={(e)=> this.onHover(e, '')}
                           key={i}
                           onClick={(e) =>this.showInfo(e, marker)}
                           properties={marker.name} />

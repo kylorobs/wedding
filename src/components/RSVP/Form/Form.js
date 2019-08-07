@@ -17,7 +17,7 @@ const attendeeData = {
         valid: false,
         config: {
             type: 'text',
-            placeholder: 'Your name'
+            placeholder: 'Your full name'
         },
         validation: {
             required: true
@@ -82,7 +82,7 @@ class Form extends React.Component{
                         valid: false,
                         config: {
                             type: 'text',
-                            placeholder: 'Your name'
+                            placeholder: 'Your full name'
                         },
                         validation: {
                             required: true
@@ -199,7 +199,6 @@ class Form extends React.Component{
         console.log(rsvp);
         axios.post('/rsvps.json', rsvp)
             .then(res =>{
-                this.setState({loading: false})
                 navigate('/thankyou')
             })
             .catch(er => {

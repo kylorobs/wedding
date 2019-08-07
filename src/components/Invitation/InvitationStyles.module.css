@@ -23,6 +23,11 @@
   text-align: right;
 }
 
+.heading p a {
+  color: #d4ab31;
+  text-decoration: none;
+}
+
 .regret {
   font-size: 1em;
   font-style: italic;
@@ -87,6 +92,10 @@
   .heading{
     flex-flow: column;
     align-items: center;
+  }
+
+  .heading p{
+    text-align: center;
   }
 
   .invitationContainer h4 {
