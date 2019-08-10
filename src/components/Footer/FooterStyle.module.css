@@ -1,0 +1,49 @@
+footer {
+    margin: 4em 0;
+  }
+  
+  .container {
+    width: 75%;
+    margin: auto;
+  }
+  
+  footer hr {
+    background-color: green;
+    height: 1px;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: green;
+    padding: 0;
+    text-decoration: none;
+  }
+  
+  .madeby {
+      font-size: 16px;
+      font-style: italic;
+  }
+  
+  .email a{
+    font-size: 16px;
+    color: green;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media only screen and (max-width: 780px){
+    .container {
+      width: 100%;
+      margin: auto;
+      padding: 0 1em;
+    }
+  
+    .footer {
+    justify-content: center;
+    padding: 0;
+    flex-direction: column-reverse;
+    }
+  }
+  

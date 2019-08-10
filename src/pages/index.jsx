@@ -8,6 +8,7 @@ import Invitation from '../components/Invitation/Invitation'
 import Accommodation from '../components/Accommodation/Accommodation'
 import Activities from '../components/Activities/Activities'
 import Form from '../components/RSVP/Form/Form';
+import Footer from '../components/Footer/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope, faKey, faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 library.add(faEnvelope, faKey, faTimesCircle);
@@ -31,6 +32,7 @@ class Index extends React.Component {
           <Activities />
           <SectionHeader title="RSVP" />
           <Form />
+          <Footer />
         </div>
       </Layout>
     );
