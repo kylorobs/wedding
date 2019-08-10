@@ -2,18 +2,18 @@
 var CPTmarkers = {
   cpt : [{
     coords : [18.43, -34.19],
-    name : "Simonstown",
-    text : "On route to the Penguins, a stop off in Simonstown is well worth the visit. It’s one of the oldest towns and home to the South African Naval Base. The buildings and their balconies make it really quite picturesque and there is a few good coffee spots. "
+    name : "Simon's Town",
+    text : "On route to see the penguins at Boulder's Beach, a stop off in Simon's Town is well worth it. It’s one of the oldest towns and home to the South African Naval Base. The buildings and their balconies make it really quite picturesque and there are a few good coffee spots and an ice cream shop. "
   },
   {
     coords : [18.41, -33.96],
     name : "Table Mountain",
-    text : "You can opt to hike up table mountain via various different routes. Table Mountain National Park stretches from Signal Hill in the city to Cape Point in the south (60 odd kilometers) with numerous access points for walks at Tokai, Cecilia Forest, Constantia Nek, Rhodes Memorial and Silvermine. The reward depending on your preference for heights is the cable car down."
+    text : "Table Mountain National Park stretches from Signal Hill in the city to Cape Point in the south (60 odd kilometers) with numerous access points for walks at Tokai, Cecilia Forest, Constantia Nek, Rhodes Memorial and Silvermine. The reward depending on your preference for heights is the cable car down."
   },
   {
     coords : [18.38, -33.93],
     name : "Lion's Head",
-    text : "A short (max 2 hours), easyish hike (where it gets ropey there are metal chains) giving you great views of Cape Town. Views incorporate the City bowl, the Twelve Apostles, the ocean, as well as look towards Table Mountain. "
+    text : "A short (max 2 hours), easy-ish hike (where it gets ropey there are metal chains) giving you great views of Cape Town. Views incorporate the City bowl, the Twelve Apostles, the ocean, as well as look towards Table Mountain. "
   },
   {
     coords : [18.88, -33.834],
@@ -23,7 +23,7 @@ var CPTmarkers = {
   {
     coords : [18.47, -34.35],
     name : "Cape of Good Hope",
-    text : "Continue winding round the peninsula and you get to the national park – Cape of Good Hope. Get here early as there is often a long long queue of cars. You can take a walk to the end of the rock. It's really beautiful and there are also beaches you can only reach by foot.",
+    text : "Continue winding round the peninsula and you get to the national park – Cape of Good Hope. Get here early as there is often a long long queue of cars. It's really beautiful and there are also beaches you can only reach by foot.",
     url: "https://capepoint.co.za/visitor-info/"
   },
   {
@@ -41,7 +41,7 @@ var CPTmarkers = {
   {
     coords : [18.45, -34.123],
     name : "The Brass Bell - Kalk Bay",
-    text : "This is a restaurant in the centre of the village right near the train station. There is sometimes live music in here but it’s a good place to go for a drink and watch the waves with yummy pizzas. Kyle and his friends have stumbled out of here after a good New Year’s eve.",
+    text : "This is a famous restaurant near the train station in Kalk Bay. There is sometimes live music here, but it’s a good place to go for a drink and watch the waves with yummy pizzas. Kyle and his friends have stumbled out of here after a good New Year’s eve a few times.",
     url: "www.brassbell.co.za"
   },
   {
