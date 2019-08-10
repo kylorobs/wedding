@@ -7,6 +7,7 @@ import penguins from '../../images/penguins.jpg';
 import table from '../../images/table.jpeg';
 import kirst from '../../images/kirst.jpg';
 import parkrun from '../../images/parkrun.jpg';
+import signal from '../../images/signal.jpg';
 
 
 const Activities = () => {
@@ -27,7 +28,7 @@ const Activities = () => {
                  text="For the energetic, chloe will be doing a park run (yep, on the day of the wedding)."
             />
              <ImageText 
-                 image={lions} 
+                 image={signal} 
                  date="13th January"
                  header="Sundowners on Signal Hill"
                  text="Signal Hill offers spectacular views of the Cape Town city and coastline, especially with it being full moon. It's even beter with a drink in hand! You can drive there or walk up, and we will book a picnic spot from 5pm."
