@@ -11,6 +11,7 @@ const input = (props) => {
                         className={classes.Input}
                         {...props.config}
                         value={props.value}
+                        {...props.validation}
                         onChange={props.changed}/>
         break;
         case 'select' :

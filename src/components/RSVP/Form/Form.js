@@ -34,8 +34,9 @@ const attendeeData = {
             placeholder: 'Any dietary requirements'
         },
         validation: {
-            required: true
-        }
+            required: false
+        },
+        valid: false
     },
     // vegetarian: {
     //     field: 'vegetarian',
@@ -63,8 +64,9 @@ const attendeeData = {
             }]
         },
         validation: {
-            required: true
-        }
+            required: false
+        },
+        valid: true
     }
 };
 
@@ -86,7 +88,8 @@ class Form extends React.Component{
                         },
                         validation: {
                             required: true
-                        }
+                        },
+                        valid: false
                     },
                     dietary: { 
                         field: 'dietary',
@@ -99,8 +102,9 @@ class Form extends React.Component{
                             placeholder: 'Any dietary requirements'
                         },
                         validation: {
-                            required: true
-                        }
+                            required: false
+                        },
+                        valid: true
                     },
                     // vegetarian: {
                     //     field: 'vegetarian',
@@ -128,8 +132,9 @@ class Form extends React.Component{
                             }]
                         },
                         validation: {
-                            required: true
-                        }
+                            required: false
+                        },
+                        valid: true
                     }
                 }
             },
@@ -145,11 +150,13 @@ class Form extends React.Component{
                 },
                 validation: {
                     required: false
-                }
+                },
+                valid: true
             },
             formValid: false
         },
-        loading: false
+        loading: false,
+        showError: false
     }
 
     addAttendee = (e) => {
@@ -164,11 +171,31 @@ class Form extends React.Component{
         this.setState({form: form})
     }
 
-    inputHandler = (e, id , fieldValue) => {
+    checkValidity = (value, rules) => {
+        let isValid = true;
+        if (rules.required){
+            isValid = value.trim() !== '' && isValid;
+        }
+
+        if (rules.minLength){
+            isValid = value.length >= rules.minLength && isValid;
+        }
+
+        if (rules.maxLength){
+            isValid = value.length <= rules.minLength && isValid;
+        }
+
+        return isValid;
+    }
+
+    inputHandler = (e, id, fieldValue) => {
         let form = {...this.state.form};
         if (form.attendees[id][fieldValue].field === fieldValue){
-            form.attendees[id][fieldValue].value = e.target.value;
-            this.setState({form: form })
+                let isValid = this.checkValidity(e.target.value, form.attendees[id][fieldValue].validation);
+                console.log("Is it valid? " + isValid)
+                form.attendees[id][fieldValue].value = e.target.value;
+                form.attendees[id][fieldValue].valid = isValid;
+                this.setState({form: form, showError:!isValid })
         }
     }
 
@@ -181,33 +208,42 @@ class Form extends React.Component{
     }
 
     handleSubmit = () => {
-        // e.preventDefault();
-        this.setState({loading: true})
-        const rsvp = {};
-        const attendees = [];
-        for (let attendee in this.state.form.attendees){
-            attendees.push(this.state.form.attendees[attendee])
+        let readyToSubmit = true;
+        const attendees = this.state.form.attendees; 
+        for (let attendee in attendees){
+            console.log(attendees[attendee])
+            if (!attendees[attendee].name.valid) readyToSubmit = false;
         }
-        rsvp.attendees = attendees.map(att => {
-               return { name: att.name.value,
-                        attending: att.attending.value,
-                        // vegetarian: att.vegetarian.value,
-                        dietary: att.dietary.value
-                       }
-        });
-        rsvp.message = this.state.form.message.value;
-        console.log(rsvp);
-        axios.post('/rsvps.json', rsvp)
-            .then(res =>{
-                navigate('/thankyou')
-            })
-            .catch(er => {
-                console.log("error: " + er );
-                this.setState({loading: false})
-            })
-        
-            
+        if (!readyToSubmit){
+            this.setState({showError: true})
+        }
 
+        else {
+            this.setState({loading: true})
+            const rsvp = {};
+            const attendees = [];
+            for (let attendee in this.state.form.attendees){
+                attendees.push(this.state.form.attendees[attendee])
+            }
+            rsvp.attendees = attendees.map(att => {
+                   return { name: att.name.value,
+                            attending: att.attending.value,
+                            // vegetarian: att.vegetarian.value,
+                            dietary: att.dietary.value
+                           }
+            });
+            rsvp.message = this.state.form.message.value;
+            console.log(rsvp);
+            axios.post('/rsvps.json', rsvp)
+                .then(res =>{
+                    navigate('/thankyou')
+                })
+                .catch(er => {
+                    console.log("error: " + er );
+                    this.setState({loading: false})
+                }) 
+    
+        }
     }
 
 
@@ -221,6 +257,7 @@ class Form extends React.Component{
         }
         const message = this.state.form.message;
         let form = null;
+        let errorMessage = <p style={{color: 'red'}}>Make sure you have filled in your full name</p>
         if (this.state.loading) form = <Spinner />;
         else form = (
             <React.Fragment>
@@ -251,6 +288,7 @@ class Form extends React.Component{
         return (
             <div className={classes.FormContainer}>
                {form}
+               {this.state.showError? errorMessage : null}
             </div>
         )
     }
