@@ -63,6 +63,12 @@
   min-height: 20em;
 }
 
+.extraInfo {
+  text-align: center;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
 @media only screen and (max-width: 1100px){
   .ImageContainer {
     width: 100%;

@@ -13,7 +13,7 @@ const Activities = () => {
     
     return (
         <div className='imageText'>
-            <p>As many of us are travelling from all over the world to be at our wedding, we have planned a few get-togethers before and after to experience Cape Town. There is no obligation to be at present at any of these, and feel free to pick and choose whatever takes your fancy.</p><p><strong> We will email you in December for more information about each activity.</strong></p>
+            <p>As many of us are travelling from all over the world to be at our wedding, we have planned a few get-togethers before and after to experience Cape Town. There is no obligation to be at present at any of these, and feel free to pick and choose whatever takes your fancy.</p><p style={{color: 'green'}}><strong> We will email you in December for more information about each activity.</strong></p>
             <ImageText 
                  image={kirst} 
                  date="9th January"
@@ -30,7 +30,7 @@ const Activities = () => {
                  image={lions} 
                  date="13th January"
                  header="Sundowners on Signal Hill"
-                 text="Signal Hill offers spectacular views of the cape town city and coastline, especially with it being full moon. It's even beter with a drink in hand! You can drive there or walk up, and we will book a picnic spot from 5pm."
+                 text="Signal Hill offers spectacular views of the Cape Town city and coastline, especially with it being full moon. It's even beter with a drink in hand! You can drive there or walk up, and we will book a picnic spot from 5pm."
             /> 
             <ImageText 
                  image={clifton} 

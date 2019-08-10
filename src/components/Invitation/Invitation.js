@@ -27,6 +27,7 @@ const Invitation = (props) => {
           <h4> DRESS </h4>
           <p> Summer Smart</p>
         </div> 
+        <p className={Styles.extraInfo}>We regret no children. Carriages at midnight.</p>
       </div>
     </div>
   )
