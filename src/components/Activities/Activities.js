@@ -31,18 +31,6 @@ const Activities = () => {
                  header="Sundowners on Signal Hill"
                  text="Signal Hill offers spectacular views of the Cape Town city and coastline, especially with it being full moon. It's even beter with a drink in hand! You can drive there or walk up, and we will book a picnic spot from 5pm."
             /> 
-            <ImageText 
-                 image={clifton} 
-                 date="14th January"
-                 header="Clifton/Camps Bay AM"
-                 text="We will be having a morning beach session, followed by drinks in Camps Bay. Beware the nudists!"
-            />
-            <ImageText 
-                 image={penguins} 
-                 date="19th January"
-                 header="Boulder's Beach Penguins"
-                 text="Just a short walk from Kyle's Simon's Town home, be prepared to mingle with some penguins. Drinks and snacks at Kyle's house will follow."
-            />
         </div>
     )
 }
