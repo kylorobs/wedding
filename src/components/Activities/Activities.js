@@ -1,10 +1,6 @@
 import React from 'react';
-import ImageText from '../ImageText/ImageText'
-import './ActivitiesStyles.css'
-import lions from '../../images/lions.jpg';
-import clifton from '../../images/clifton.jpg';
-import penguins from '../../images/penguins.jpg';
-import table from '../../images/table.jpeg';
+import ImageText from '../ImageText/ImageText';
+import './ActivitiesStyles.css';
 import kirst from '../../images/kirst.jpg';
 import parkrun from '../../images/parkrun.jpg';
 import signal2 from '../../images/signal2.jpg';
