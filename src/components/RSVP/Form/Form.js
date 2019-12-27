@@ -6,7 +6,7 @@ import Input from './Input/Input';
 import axios from '../../../axios';
 import withErrorHandler from '../../../hoc/withErrorHandler';
 import Spinner from '../Spinner/Spinner';
-import { navigate, Link } from 'gatsby';
+import { navigate } from 'gatsby';
 
 const attendeeData = {
     name : {
@@ -289,7 +289,6 @@ class Form extends React.Component{
             <div className={classes.FormContainer}>
                {form}
                {this.state.showError? errorMessage : null}
-               <p> Find our <Link to='/giftregistry'>gift registry</Link> here.</p>
             </div>
         )
     }
