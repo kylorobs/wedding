@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from './InvitationStyles.module.css';
-import coupleImage from '../../images/couple.jpg'
+import coupleImage from '../../images/couple.jpg';
+import {Link} from 'gatsby';
 
 const Invitation = (props) => {
 
@@ -28,6 +29,7 @@ const Invitation = (props) => {
           <p> Summer Smart</p>
         </div> 
         <p className={Styles.extraInfo}>We regret no children. Carriages at midnight.</p>
+        <p className={Styles.extraInfo}>Find our <Link to='/gifts'>gift registry?</Link></p>
       </div>
     </div>
   )

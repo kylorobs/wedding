@@ -289,7 +289,7 @@ class Form extends React.Component{
             <div className={classes.FormContainer}>
                {form}
                {this.state.showError? errorMessage : null}
-               <p> Find our <Link to='/giftregistry'>gift registry</Link> here.</p>
+               <p> Find our <Link to='/gifts'>gift registry</Link> here.</p>
             </div>
         )
     }

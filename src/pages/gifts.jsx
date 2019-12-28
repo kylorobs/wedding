@@ -2,7 +2,7 @@ import React from 'react';
 import Landing from '../components/Landing/Landing';
 import Footer from '../components/Footer/Footer';
 
-class gift extends React.Component {
+class giftRegistry extends React.Component {
     render(){
         return (
             <React.Fragment>
@@ -20,4 +20,4 @@ class gift extends React.Component {
     }
 }
 
-export default gift;
+export default giftRegistry;
